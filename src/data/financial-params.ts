@@ -1,7 +1,7 @@
 import type { FinancialParams } from "@/types";
 
 export const DEFAULT_FINANCIAL_PARAMS: FinancialParams = {
-  parkingSpaces: 200,
+  parkingSpaces: 1100,
   parkingFloors: 2,
   baseTariff: 5_000,       // COP/hr
   maxTariff: 15_000,       // COP/hr (events)

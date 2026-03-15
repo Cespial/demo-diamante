@@ -43,9 +43,9 @@ export function FinancialTab() {
             <SliderParam
               label="Celdas de Parqueadero"
               value={params.parkingSpaces}
-              min={50}
-              max={500}
-              step={10}
+              min={200}
+              max={1500}
+              step={50}
               format={(v) => `${v} celdas`}
               onChange={(v) => update("parkingSpaces", v)}
             />

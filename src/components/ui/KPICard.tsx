@@ -20,7 +20,10 @@ export function KPICard({
   color = "#3b82f6",
 }: KPICardProps) {
   return (
-    <div className="rounded-lg border border-white/10 bg-white/5 p-3">
+    <div
+      className="rounded-lg border border-white/10 bg-white/5 p-3 transition-all duration-200 hover:scale-[1.02] hover:bg-white/[0.07] hover:border-white/15 cursor-default"
+      style={{ borderLeft: `4px solid ${color}` }}
+    >
       <div className="mb-1 text-xs font-medium text-white/50">{label}</div>
       <div className="text-2xl font-bold" style={{ color }}>
         {value}

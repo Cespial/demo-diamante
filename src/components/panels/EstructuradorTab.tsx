@@ -124,22 +124,22 @@ function buildScenarioParams(
 ): FinancialParams {
   const configs = {
     conservador: {
-      parkingSpaces: 150,
+      parkingSpaces: 800,
       occupancy: 0.4,
       tariff: 4_000,
       costPct: 0.35,
       events: 40,
     },
     base: {
-      parkingSpaces: 200,
+      parkingSpaces: 1100,
       occupancy: 0.5,
       tariff: 5_000,
       costPct: 0.3,
       events: 55,
     },
     optimista: {
-      parkingSpaces: 250,
-      occupancy: 0.6,
+      parkingSpaces: 1100,
+      occupancy: 0.65,
       tariff: 6_000,
       costPct: 0.25,
       events: 70,
@@ -292,7 +292,7 @@ export function EstructuradorTab({ scenario, hour }: EstructuradorTabProps) {
 
   // ── Investment indicators (base scenario) ──
   const investmentMetrics = useMemo(() => {
-    const capex = 15_000_000_000; // 15,000M COP
+    const capex = 82_500_000_000; // 1,100 celdas x $75M/celda
     const wacc = 0.12;
     const baseNet = scenarios.base.netIncome;
 
@@ -370,19 +370,9 @@ export function EstructuradorTab({ scenario, hour }: EstructuradorTabProps) {
               />
               <Row
                 label="Componentes"
-                value="2 sotanos parqueadero publico (200 celdas) + ~2,000 m2 comercio a nivel"
+                value="2 sotanos parqueadero publico (1,100 celdas) + ~2,000 m2 comercio a nivel"
               />
               <Row label="Fase actual" value="Pre-factibilidad" />
-              <Row
-                label="Consultores"
-                value="Cali Mayor ($300M), Financiero (~$440M), Ciertos ($70M), Socio-ambiental ($99M)"
-              />
-              <Row
-                label="Total consultoria"
-                value="~$909M COP"
-                bold
-                highlight="#ef4444"
-              />
             </tbody>
           </table>
         </CardContent>
@@ -473,7 +463,7 @@ export function EstructuradorTab({ scenario, hour }: EstructuradorTabProps) {
             <KPICard
               label="Intersecciones monitoreadas"
               value={formatNumber(trafficMetrics.intersections)}
-              subtitle="Aforos HPTU reales"
+              subtitle="Aforos vehiculares reales"
               color="#3b82f6"
             />
             <KPICard
@@ -569,7 +559,7 @@ export function EstructuradorTab({ scenario, hour }: EstructuradorTabProps) {
             <tbody>
               <Row
                 label="Gap oferta eventos"
-                value="200 celdas propias vs ~600 carros esperados"
+                value="1,100 celdas propias vs demanda pico"
               />
               <Row
                 label="Venues deportivos"
@@ -826,7 +816,7 @@ export function EstructuradorTab({ scenario, hour }: EstructuradorTabProps) {
             <KPICard
               label="CAPEX estimado"
               value={formatCOP(investmentMetrics.capex)}
-              subtitle="200 celdas x $75M/celda (sotano)"
+              subtitle="1,100 celdas x $75M/celda (sotano)"
               color="#ef4444"
             />
             <KPICard
@@ -888,18 +878,8 @@ export function EstructuradorTab({ scenario, hour }: EstructuradorTabProps) {
                 highlight="#ef4444"
               />
               <Row
-                label="tensor.lat (este demo)"
-                value="$0 COP (piloto gratuito)"
-                highlight="#22c55e"
-              />
-              <Row
-                label="Producto completo tensor.lat"
-                value="~$60-80M COP"
-                highlight="#22c55e"
-              />
-              <Row
-                label="APP anterior (Quintero)"
-                value="$1.6B inversion total, $4B estructuracion"
+                label="APP anterior (Quintero, 2020)"
+                value="$1.6 billones inversion, $4,000M estructuracion"
               />
               <Row
                 label="APP anterior resultado"
@@ -907,23 +887,11 @@ export function EstructuradorTab({ scenario, hour }: EstructuradorTabProps) {
                 highlight="#ef4444"
               />
               <Row
-                label="Renovacion actual (Gutierrez)"
-                value="$730B total, $450B publicos"
+                label="Renovacion actual (Gutierrez, 2025)"
+                value="~$730,000M total, ~$450,000M publicos"
               />
             </tbody>
           </table>
-
-          <div className="mt-3 rounded border border-green-500/20 bg-green-500/5 p-2">
-            <p className="text-xs text-green-400 font-medium mb-1">
-              Ahorro vs. consultoria tradicional
-            </p>
-            <p className="text-xs text-white/60">
-              Estima paga $909M en consultores para la pre-factibilidad.
-              tensor.lat entrega un analisis comparable por $0 (piloto) y el
-              producto completo por ~$60-80M — un ahorro del{" "}
-              <span className="font-bold text-green-400">91-93%</span>.
-            </p>
-          </div>
         </CardContent>
       </Card>
 

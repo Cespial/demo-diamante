@@ -9,7 +9,7 @@ import { getScenario } from "./scenario-engine";
 export function useAppState() {
   const [state, setState] = useState<AppState>({
     activeScenario: "normal",
-    activeTab: "ejecutivo",
+    activeTab: "decision",
     hour: 12,
     layerVisibility: {
       "traffic-live": false,
@@ -24,9 +24,8 @@ export function useAppState() {
       "commerce-hotels": false,
       "commerce-shops": false,
       "commerce-sports": false,
-      "personas-heatmap": true,
+      "commerce-attractions": false,
       "events-radius": false,
-      "events-heatmap": false,
       "urban-diamante": true,
       "urban-stadium": true,
       "urban-comuna": true,

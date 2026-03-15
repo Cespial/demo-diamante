@@ -18,7 +18,7 @@ interface ParkingTabProps {
 export function ParkingTab({ scenario, hour }: ParkingTabProps) {
   const { data: parking, loading } = useData<ParkingPOI[]>("/data/parking-pois.json");
 
-  const totalSpaces = 200;
+  const totalSpaces = 1100;
   const { demand, occupancy, overflow } = getParkingDemand(scenario, hour, totalSpaces);
   const tariff = getTariff(scenario, hour, DEFAULT_FINANCIAL_PARAMS.baseTariff, DEFAULT_FINANCIAL_PARAMS.maxTariff);
 
@@ -95,7 +95,7 @@ export function ParkingTab({ scenario, hour }: ParkingTabProps) {
           <CardHeader>Esquema Valet — Parqueaderos Aliados</CardHeader>
           <CardContent>
             <p className="text-[10px] text-white/40 mb-2">
-              En eventos con overflow (&gt;200 celdas), operar valet con parqueaderos a 500-700m
+              En eventos con overflow (&gt;1,100 celdas), operar valet con parqueaderos a 500-700m
             </p>
             <div className="space-y-1.5 text-xs max-h-36 overflow-y-auto">
               {parking
@@ -124,7 +124,7 @@ export function ParkingTab({ scenario, hour }: ParkingTabProps) {
         <CardHeader>Diamante — Propuesta de Valor</CardHeader>
         <CardContent>
           <ul className="space-y-1 text-xs text-white/60 list-disc list-inside">
-            <li>200 celdas en 2 sótanos bajo nivel de cancha</li>
+            <li>1,100 celdas en 2 sótanos bajo nivel de cancha</li>
             <li>Tarifa dinámica: $5,000 base → $15,000 en eventos</li>
             <li>Pases mensuales: 40 slots a $400K COP</li>
             <li>Servicio valet en eventos grandes (+$15K/servicio)</li>

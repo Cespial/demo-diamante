@@ -12,9 +12,11 @@ import {
   Building2,
   DollarSign,
   FileText,
+  Target,
 } from "lucide-react";
 
 const TAB_CONFIG: { id: TabId; label: string; icon: React.ReactNode }[] = [
+  { id: "decision", label: "Decisión", icon: <Target size={16} /> },
   { id: "ejecutivo", label: "Ejecutivo", icon: <BarChart3 size={16} /> },
   { id: "trafico", label: "Tráfico", icon: <Car size={16} /> },
   { id: "parking", label: "Parking", icon: <ParkingSquare size={16} /> },

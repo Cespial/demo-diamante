@@ -27,7 +27,7 @@ function useGoogleMaps() {
     const existing = document.querySelector('script[src*="maps.googleapis.com"]');
     if (existing) { existing.addEventListener("load", () => setLoaded(true)); return; }
     const script = document.createElement("script");
-    script.src = `https://maps.googleapis.com/maps/api/js?key=${GOOGLE_API_KEY}&libraries=visualization&v=weekly`;
+    script.src = `https://maps.googleapis.com/maps/api/js?key=${GOOGLE_API_KEY}&v=weekly`;
     script.async = true;
     script.defer = true;
     script.onload = () => setLoaded(true);
@@ -55,7 +55,7 @@ export function DiamanteMap({ scenario, hour, layerVisibility, onToggleLayer }: 
   const { data: comuna11 } = useData<GeoJSON.FeatureCollection>("/data/comuna11-boundary.json");
   const { data: stadium } = useData<GeoJSON.FeatureCollection>("/data/stadium-footprint.json");
   const { data: closureRoutes } = useData<any[]>("/data/closure-routes.json");
-  const { data: pedIntensity } = useData<GeoJSON.FeatureCollection>("/data/pedestrian-intensity.json");
+  const { data: attractions } = useData<CommercePOI[]>("/data/attractions-pois.json");
 
   const vis = useCallback((id: string) => layerVisibility[id] ?? false, [layerVisibility]);
   const trafficLayerRef = useRef<google.maps.TrafficLayer | null>(null);
@@ -398,28 +398,30 @@ export function DiamanteMap({ scenario, hour, layerVisibility, onToggleLayer }: 
       });
     }
 
-    // ── Pedestrian intensity heatmap ──
-    if (vis("personas-heatmap") && pedIntensity?.features) {
-      const heatmapData = pedIntensity.features
-        .filter((f: any) => f.properties?.weight > 0.1)
-        .map((f: any) => ({
-          location: new google.maps.LatLng(
-            f.geometry.coordinates[1],
-            f.geometry.coordinates[0]
-          ),
-          weight: f.properties.weight,
-        }));
-      if (heatmapData.length > 0 && (google.maps as any).visualization) {
-        const heatmap = new (google.maps as any).visualization.HeatmapLayer({
-          data: heatmapData,
-          radius: 40,
-          opacity: 0.6,
+    // ── Attractions / POIs de interés ──
+    if (vis("commerce-attractions") && attractions) {
+      attractions.forEach((a) => {
+        const marker = new google.maps.Marker({
+          position: { lat: a.lat, lng: a.lng },
           map,
+          title: a.name,
+          icon: {
+            path: google.maps.SymbolPath.BACKWARD_CLOSED_ARROW,
+            scale: 6,
+            fillColor: "#f43f5e",
+            fillOpacity: 0.9,
+            strokeColor: "#fff",
+            strokeWeight: 1.5,
+          },
         });
-        add(heatmap);
-      }
+        marker.addListener("click", () => {
+          iw.setContent(`<b>${a.name}</b><br>${a.subcategory || a.category}${a.rating ? ` · ${a.rating}★` : ""}`);
+          iw.open(map, marker);
+        });
+        add(marker);
+      });
     }
-  }, [googleLoaded, scenario, hour, corridors, parking, commerce, hotels, sports, incidents, odRoutes, isochrones, comuna11, stadium, closureRoutes, pedIntensity, vis]);
+  }, [googleLoaded, scenario, hour, corridors, parking, commerce, hotels, sports, incidents, odRoutes, isochrones, comuna11, stadium, closureRoutes, attractions, vis]);
 
   return (
     <div className="relative h-full w-full">

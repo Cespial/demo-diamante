@@ -281,7 +281,8 @@ export type TabId =
   | "eventos"
   | "urbanismo"
   | "financiero"
-  | "estructurador";
+  | "estructurador"
+  | "decision";
 
 // ── App State ──
 export interface AppState {

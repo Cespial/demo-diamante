@@ -11,6 +11,7 @@ import { EventsTab } from "./EventsTab";
 import { UrbanTab } from "./UrbanTab";
 import { FinancialTab } from "./FinancialTab";
 import { EstructuradorTab } from "./EstructuradorTab";
+import { DecisionTab } from "./DecisionTab";
 
 interface PanelContainerProps {
   activeTab: TabId;
@@ -26,6 +27,7 @@ export function PanelContainer({ activeTab, onTabChange, scenario, hour }: Panel
         <TabBar activeTab={activeTab} onTabChange={onTabChange} />
       </div>
       <div className="flex-1 overflow-y-auto p-3 space-y-3">
+        {activeTab === "decision" && <DecisionTab scenario={scenario} hour={hour} />}
         {activeTab === "ejecutivo" && <ExecutiveTab scenario={scenario} hour={hour} />}
         {activeTab === "trafico" && <TrafficTab scenario={scenario} hour={hour} />}
         {activeTab === "parking" && <ParkingTab scenario={scenario} hour={hour} />}

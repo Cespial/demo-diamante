@@ -21,7 +21,7 @@ export function ExecutiveTab({ scenario, hour }: ExecutiveTabProps) {
   const { data: macro } = useData<MacroContext>("/data/macro-context.json");
 
   const financials = calculateFinancials();
-  const parkingInfo = getParkingDemand(scenario, hour, 200);
+  const parkingInfo = getParkingDemand(scenario, hour, 1100);
 
   // Aggregate traffic volume at current hour across all intersections
   const totalVolume = aforos
@@ -64,7 +64,7 @@ export function ExecutiveTab({ scenario, hour }: ExecutiveTabProps) {
         <KPICard
           label="Ocupación Parking"
           value={`${Math.round(parkingInfo.occupancy * 100)}%`}
-          subtitle={`${parkingInfo.demand} / 200 celdas`}
+          subtitle={`${parkingInfo.demand} / 1,100 celdas`}
           trend={parkingInfo.overflow ? "up" : "neutral"}
           trendValue={parkingInfo.overflow ? "OVERFLOW" : "OK"}
           color={parkingInfo.overflow ? "#ef4444" : "#f59e0b"}
@@ -158,7 +158,7 @@ export function ExecutiveTab({ scenario, hour }: ExecutiveTabProps) {
         <CardHeader>Conclusiones</CardHeader>
         <CardContent>
           <ul className="space-y-1.5 text-xs text-white/60 list-disc list-inside">
-            <li>200 celdas de parqueadero generan <span className="text-green-400 font-medium">{formatCOP(financials.parkingBase + financials.parkingSurcharge + financials.monthlyPasses)}/año</span> combinando base + eventos + pases</li>
+            <li>1,100 celdas de parqueadero generan <span className="text-green-400 font-medium">{formatCOP(financials.parkingBase + financials.parkingSurcharge + financials.monthlyPasses)}/año</span> combinando base + eventos + pases</li>
             <li>Los ~55 eventos/año representan un <span className="text-blue-400 font-medium">uplift del {Math.round((financials.parkingSurcharge / financials.parkingBase) * 100)}%</span> sobre ingresos base</li>
             <li>El comercio a nivel aporta <span className="text-purple-400 font-medium">{formatCOP(financials.commerceRent)}/año</span> con ocupación del 85%</li>
             <li>La zona tiene alta demanda no atendida en eventos masivos (&gt;45K asistentes)</li>

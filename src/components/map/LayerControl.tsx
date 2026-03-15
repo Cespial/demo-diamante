@@ -14,7 +14,7 @@ const LAYER_GROUPS: LayerGroup[] = [
     name: "Tráfico",
     layers: [
       { id: "traffic-live", label: "Tráfico en vivo (Google)" },
-      { id: "traffic-corridors", label: "Corredores (aforos HPTU)" },
+      { id: "traffic-corridors", label: "Corredores vehiculares" },
       { id: "traffic-od", label: "Rutas origen-destino" },
       { id: "traffic-closures", label: "Simulación cierres viales" },
       { id: "traffic-incidents", label: "Incidentes viales (6,384)" },
@@ -29,19 +29,18 @@ const LAYER_GROUPS: LayerGroup[] = [
     ],
   },
   {
-    name: "Comercio",
+    name: "Comercio y POIs",
     layers: [
       { id: "commerce-restaurants", label: "Restaurantes / Bares" },
       { id: "commerce-hotels", label: "Hoteles" },
       { id: "commerce-shops", label: "Comercio general" },
       { id: "commerce-sports", label: "Deportes / Ocio" },
+      { id: "commerce-attractions", label: "Atracciones turísticas" },
     ],
   },
   {
-    name: "Personas",
+    name: "Eventos",
     layers: [
-      { id: "personas-heatmap", label: "Intensidad peatonal" },
-      { id: "events-heatmap", label: "Heatmap eventos" },
       { id: "events-radius", label: "Radios de impacto" },
     ],
   },
