@@ -104,6 +104,54 @@ export function EventsTab({ scenario }: EventsTabProps) {
           </div>
         </CardContent>
       </Card>
+
+      {/* Comparativa con Movistar Arena */}
+      <Card className="border-purple-500/20">
+        <CardHeader className="text-purple-400">Comparativa con Movistar Arena (Bogotá)</CardHeader>
+        <CardContent>
+          <div className="rounded border border-white/10 overflow-hidden">
+            <table className="w-full text-[10px]">
+              <thead>
+                <tr className="bg-white/5">
+                  <th className="text-left p-2 text-white/50 font-semibold">Métrica</th>
+                  <th className="text-right p-2 text-blue-400 font-semibold">Atanasio Girardot</th>
+                  <th className="text-right p-2 text-purple-400 font-semibold">Movistar Arena</th>
+                </tr>
+              </thead>
+              <tbody className="text-white/60">
+                <tr className="border-t border-white/5">
+                  <td className="p-2">Capacidad</td>
+                  <td className="text-right p-2 text-white/80 font-medium">40,943</td>
+                  <td className="text-right p-2 text-white/80 font-medium">17,682</td>
+                </tr>
+                <tr className="border-t border-white/5">
+                  <td className="p-2">Eventos/año</td>
+                  <td className="text-right p-2 text-white/80">~102</td>
+                  <td className="text-right p-2 text-white/80">~80</td>
+                </tr>
+                <tr className="border-t border-white/5">
+                  <td className="p-2">Parking dedicado</td>
+                  <td className="text-right p-2">
+                    <span className="text-red-400">0 (hoy)</span>
+                    <span className="text-white/30 mx-1">&rarr;</span>
+                    <span className="text-green-400 font-semibold">1,100 (Diamante)</span>
+                  </td>
+                  <td className="text-right p-2 text-white/80">~500</td>
+                </tr>
+                <tr className="border-t border-white/5">
+                  <td className="p-2">Tipo principal</td>
+                  <td className="text-right p-2 text-white/80">Fútbol + conciertos</td>
+                  <td className="text-right p-2 text-white/80">Conciertos + deportes</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <p className="text-[10px] text-white/30 mt-2">
+            El Atanasio tiene 2.3x la capacidad de Movistar Arena pero 0 celdas de parking dedicado.
+            El Diamante cierra esta brecha con 1,100 celdas.
+          </p>
+        </CardContent>
+      </Card>
     </div>
   );
 }

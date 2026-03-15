@@ -176,7 +176,7 @@ export function DecisionTab({ scenario, hour }: DecisionTabProps) {
                   fontSize: 11,
                   color: "#fff",
                 }}
-                formatter={(value: number) => [`${value.toLocaleString("es-CO")} carros`, "Demanda"]}
+                formatter={(value) => [`${Number(value).toLocaleString("es-CO")} carros`, "Demanda"]}
                 cursor={{ fill: "rgba(255,255,255,0.04)" }}
               />
               <ReferenceLine
@@ -302,7 +302,7 @@ export function DecisionTab({ scenario, hour }: DecisionTabProps) {
                     fontSize: 11,
                     color: "#fff",
                   }}
-                  formatter={(value: number) => [`${value}%`, ""]}
+                  formatter={(value) => [`${value}%`, ""]}
                 />
               </PieChart>
             </ResponsiveContainer>

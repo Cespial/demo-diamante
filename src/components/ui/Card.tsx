@@ -11,7 +11,7 @@ export function Card({ children, className }: CardProps) {
   return (
     <div
       className={cn(
-        "rounded-lg border border-white/10 bg-white/5 p-4",
+        "rounded-lg border border-white/[0.08] card-gradient p-4 transition-colors duration-200 hover:border-white/[0.12]",
         className
       )}
     >
