@@ -5,7 +5,7 @@ import { ScenarioSelector } from "@/components/scenario/ScenarioSelector";
 import { TimeSlider } from "@/components/scenario/TimeSlider";
 import { PanelContainer } from "@/components/panels/PanelContainer";
 import { DiamanteMap } from "@/components/map/DiamanteMap";
-import { Diamond } from "lucide-react";
+import Image from "next/image";
 
 export default function Home() {
   const { state, scenario, setScenario, setTab, setHour, toggleLayer } =
@@ -14,18 +14,31 @@ export default function Home() {
   return (
     <div className="flex h-screen flex-col overflow-hidden bg-gray-950 text-white">
       {/* Header */}
-      <header className="header-glass flex items-center justify-between px-5 py-2.5">
+      <header className="header-glass flex items-center justify-between px-5 py-2">
         <div className="flex items-center gap-3">
-          <div className="relative">
-            <Diamond size={22} className="text-blue-400" />
-            <div className="absolute -top-0.5 -right-0.5 h-2 w-2 rounded-full bg-green-500 pulse-live" />
-          </div>
+          <Image
+            src="/tensor-icon.svg"
+            alt="tensor.lat"
+            width={28}
+            height={28}
+            className="rounded-md"
+          />
           <div className="flex flex-col">
             <span className="text-sm font-bold tracking-tight leading-tight">
               <span className="text-white">Demo Diamante</span>
             </span>
-            <span className="text-[10px] text-white/30 tracking-widest uppercase">
-              Preparado para <span className="text-blue-400/70 font-medium">Estima</span> por tensor.lat
+            <span className="text-[10px] text-white/30 tracking-wider">
+              Desarrollado por{" "}
+              <a
+                href="https://tensor.lat"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-400/70 font-medium hover:text-blue-400 transition-colors"
+              >
+                tensor.lat
+              </a>
+              {" "}para{" "}
+              <span className="text-white/50 font-medium">Estima</span>
             </span>
           </div>
         </div>

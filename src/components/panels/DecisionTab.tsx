@@ -577,7 +577,7 @@ export function DecisionTab({ scenario, hour }: DecisionTabProps) {
       </Card>
 
       <p className="text-[10px] text-white/20 text-center pt-2">
-        Análisis generado con datos reales: Aforos Medellín, Google Places API, Google Routes API, datos.gov.co, DANE, BanRep, OSM
+        Desarrollado por <a href="https://tensor.lat" target="_blank" rel="noopener noreferrer" className="text-blue-400/40 hover:text-blue-400/60">tensor.lat</a> · Datos: Aforos Medellín, Google Places, Google Routes, datos.gov.co, DANE, BanRep, OSM
       </p>
     </div>
   );

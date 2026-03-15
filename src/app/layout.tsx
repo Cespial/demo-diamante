@@ -13,9 +13,13 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Diamante de Béisbol — Demo | tensor.lat",
+  title: "Demo Diamante — tensor.lat",
   description:
-    "Análisis de factibilidad: tráfico, parqueaderos, flujo peatonal, comercio, eventos y normatividad para el Diamante de Béisbol de Medellín",
+    "Análisis de factibilidad: tráfico, parqueaderos, flujo peatonal, comercio, eventos y normatividad para el Diamante de Béisbol de Medellín. Desarrollado por tensor.lat para Estima.",
+  icons: {
+    icon: "/favicon.ico",
+    apple: "/tensor-icon.svg",
+  },
 };
 
 export default function RootLayout({
