@@ -422,6 +422,46 @@ export function DecisionTab({ scenario, hour }: DecisionTabProps) {
         </CardContent>
       </Card>
 
+      {/* Problema de parking - datos reales */}
+      <Card className="border-red-500/20">
+        <CardHeader className="text-red-400">El Problema: Cero Parking Formal</CardHeader>
+        <CardContent>
+          <div className="space-y-1.5 text-xs text-white/60">
+            <div className="flex justify-between">
+              <span>Capacidad del Atanasio</span>
+              <span className="text-white/80 font-medium">40,943 personas</span>
+            </div>
+            <div className="flex justify-between">
+              <span>Parking formal dedicado</span>
+              <span className="text-red-400 font-bold">0 celdas</span>
+            </div>
+            <div className="flex justify-between">
+              <span>Nacional promedio/partido (2024)</span>
+              <span className="text-white/80">30,892 asistentes</span>
+            </div>
+            <div className="flex justify-between">
+              <span>DIM promedio/partido (2024)</span>
+              <span className="text-white/80">16,823 asistentes</span>
+            </div>
+            <div className="flex justify-between">
+              <span>Total H1 2024 (récord histórico)</span>
+              <span className="text-green-400 font-medium">603,403 asistentes</span>
+            </div>
+            <div className="flex justify-between">
+              <span>Parking informal (&quot;trapitos rojos&quot;)</span>
+              <span className="text-amber-400">~$10,000/carro en vía</span>
+            </div>
+            <div className="flex justify-between">
+              <span>Multa por parqueo ilegal</span>
+              <span className="text-red-400">$344,000 COP</span>
+            </div>
+          </div>
+          <p className="text-[10px] text-white/30 mt-2">
+            Fuente: El Colombiano, La FM, Liga BetPlay — datos reales 2024-2025
+          </p>
+        </CardContent>
+      </Card>
+
       {/* Competencia: gap de oferta */}
       <Card>
         <CardHeader>Gap de Oferta — Oportunidad</CardHeader>
