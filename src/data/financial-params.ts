@@ -14,10 +14,10 @@ export const DEFAULT_FINANCIAL_PARAMS: FinancialParams = {
   commerceRentMax: 120_000,
   commerceOccupancy: 0.85,
   operatingCostPct: 0.30,
-  eventsPerYear: 55,
+  eventsPerYear: 52,        // 52 sundays/year (one event per week)
   avgEventUplift: 8_000_000, // COP per event
 };
 
 export const OPERATING_HOURS = 14; // 6am - 8pm base
-export const BASE_OCCUPANCY = 0.50;
+export const BASE_OCCUPANCY = 0.45; // aligned with scenario engine
 export const VALET_EVENTS_PER_YEAR = 30;

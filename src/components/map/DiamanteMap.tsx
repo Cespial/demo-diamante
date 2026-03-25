@@ -2,7 +2,7 @@
 
 import { useState, useCallback, useEffect, useRef } from "react";
 import type { Scenario, TrafficCorridor, ParkingPOI, CommercePOI, TrafficIncident, ODRoute } from "@/types";
-import { DIAMANTE_CENTER, MAP_DEFAULT_ZOOM, IMPACT_RADII, DIAMANTE_POLYGON } from "@/data/diamante-config";
+import { DIAMANTE_CENTER, MAP_DEFAULT_ZOOM, IMPACT_RADII, DIAMANTE_POLYGON, STUDY_POLYGON } from "@/data/diamante-config";
 import { applyScenarioToTraffic } from "@/lib/scenario-engine";
 import { speedToColor } from "@/lib/mapbox-utils";
 import { useData } from "@/lib/hooks";
@@ -56,6 +56,9 @@ export function DiamanteMap({ scenario, hour, layerVisibility, onToggleLayer }: 
   const { data: stadium } = useData<GeoJSON.FeatureCollection>("/data/stadium-footprint.json");
   const { data: closureRoutes } = useData<any[]>("/data/closure-routes.json");
   const { data: attractions } = useData<CommercePOI[]>("/data/attractions-pois.json");
+  const { data: studyRoads } = useData<GeoJSON.FeatureCollection>("/data/study-road-network.geojson");
+  const { data: parkingPolygons } = useData<GeoJSON.FeatureCollection>("/data/parking-polygons.geojson");
+  const { data: manzanas } = useData<GeoJSON.FeatureCollection>("/data/manzanas-grid.geojson");
 
   const vis = useCallback((id: string) => layerVisibility[id] ?? false, [layerVisibility]);
   const trafficLayerRef = useRef<google.maps.TrafficLayer | null>(null);
@@ -101,12 +104,107 @@ export function DiamanteMap({ scenario, hour, layerVisibility, onToggleLayer }: 
       trafficLayerRef.current?.setMap(null);
     }
 
-    // ── Diamante polygon ──
+    // ── Manzana grid (block-by-block demand/supply) ──
+    if (vis("urban-barrios") && manzanas) {
+      manzanas.features.forEach((f: any) => {
+        const p = f.properties;
+        const ratio = p.demand_ratio || 0;
+        // Color by demand/supply ratio: green (<0.5), yellow (0.5-1), orange (1-1.5), red (>1.5)
+        const color = ratio > 1.5 ? "#ef4444" : ratio > 1.0 ? "#f97316" : ratio > 0.5 ? "#eab308" : "#22c55e";
+        const opacity = Math.min(0.4, 0.1 + ratio * 0.15);
+
+        const poly = new google.maps.Polygon({
+          paths: f.geometry.coordinates[0].map(([lng, lat]: number[]) => ({ lat, lng })),
+          fillColor: color,
+          fillOpacity: opacity,
+          strokeColor: "#ffffff15",
+          strokeWeight: 0.5,
+          map,
+        });
+        poly.addListener("click", () => {
+          iw.setContent(
+            `<div style="max-width:220px">` +
+            `<b>Manzana ${p.block_id}</b><br>` +
+            `<b style="color:${color}">Ratio demanda/oferta: ${ratio}</b><br>` +
+            `Celdas formales: ${p.formal_spaces}<br>` +
+            `Est. parqueo calle: ${p.est_street_spaces}<br>` +
+            `Total oferta: ${p.total_spaces}<br>` +
+            `Tráfico pico cercano: ${p.peak_traffic_nearby} veh/hr<br>` +
+            (p.nearest_aforo ? `Aforo: ${p.nearest_aforo}<br>` : "") +
+            (p.parking_names?.length ? `Parqueaderos: ${p.parking_names.join(", ")}<br>` : "") +
+            `<span style="color:#999;font-size:10px">Fuente: grid sintético + OSM + SIMM</span>` +
+            `</div>`
+          );
+          const bounds = new google.maps.LatLngBounds();
+          f.geometry.coordinates[0].forEach(([lng, lat]: number[]) => bounds.extend({ lat, lng }));
+          iw.setPosition(bounds.getCenter());
+          iw.open(map);
+        });
+        add(poly);
+      });
+    }
+
+    // ── Study polygon (Cra 68–77C × Cll 45–53A) ──
+    const studyPoly = new google.maps.Polygon({
+      paths: STUDY_POLYGON.map(([lng, lat]) => ({ lat, lng })),
+      fillColor: "#f59e0b",
+      fillOpacity: 0.05,
+      strokeColor: "#f59e0b",
+      strokeWeight: 2,
+      strokeOpacity: 0.7,
+      map,
+    });
+    // Dashed effect via icons
+    const studyOutline = new google.maps.Polyline({
+      path: STUDY_POLYGON.map(([lng, lat]) => ({ lat, lng })),
+      strokeColor: "#f59e0b",
+      strokeWeight: 2,
+      strokeOpacity: 0,
+      map,
+      icons: [{
+        icon: { path: "M 0,-1 0,1", strokeOpacity: 0.7, strokeColor: "#f59e0b", scale: 2 },
+        offset: "0",
+        repeat: "12px",
+      }],
+    });
+    add(studyPoly);
+    add(studyOutline);
+
+    // ── Diamante project marker ──
+    const diamanteMarker = new google.maps.Marker({
+      position: { lat: DIAMANTE_CENTER.lat, lng: DIAMANTE_CENTER.lng },
+      map,
+      title: "Diamante de Béisbol",
+      label: { text: "◆", color: "#fff", fontSize: "16px", fontWeight: "bold" },
+      icon: {
+        path: google.maps.SymbolPath.CIRCLE,
+        scale: 18,
+        fillColor: "#d97706",
+        fillOpacity: 0.95,
+        strokeColor: "#fbbf24",
+        strokeWeight: 3,
+      },
+      zIndex: 100,
+    });
+    diamanteMarker.addListener("click", () => {
+      iw.setContent(
+        `<div style="max-width:240px">` +
+        `<b style="font-size:13px">◆ Diamante de Béisbol</b><br>` +
+        `<span style="color:#666">Propuesta: 1,100 celdas en 2 sótanos</span><br>` +
+        `<span style="color:#666">Comercio: ~2,000 m² a nivel</span><br>` +
+        `<span style="color:#999;font-size:11px">Cra 70 × Cll 48 — Laureles-Estadio</span>` +
+        `</div>`
+      );
+      iw.open(map, diamanteMarker);
+    });
+    add(diamanteMarker);
+
+    // ── Diamante polygon (footprint) ──
     const diamante = new google.maps.Polygon({
       paths: DIAMANTE_POLYGON.map(([lng, lat]) => ({ lat, lng })),
-      fillColor: "#3b82f6",
-      fillOpacity: 0.45,
-      strokeColor: "#60a5fa",
+      fillColor: "#d97706",
+      fillOpacity: 0.35,
+      strokeColor: "#fbbf24",
       strokeWeight: 2.5,
       map,
     });
@@ -143,6 +241,82 @@ export function DiamanteMap({ scenario, hour, layerVisibility, onToggleLayer }: 
             strokeColor: "#22c55e",
             strokeWeight: 1.5,
             map,
+          });
+          add(poly);
+        }
+      });
+    }
+
+    // ── Study area full road network (703 segments, POT hierarchy) ──
+    if (vis("urban-roads") && studyRoads) {
+      const POT_COLORS: Record<string, string> = {
+        "Arteria Principal": "#ef4444",
+        "Colectora": "#f59e0b",
+        "Local Principal": "#3b82f6",
+        "Local": "#ffffff30",
+        "Servicio": "#ffffff15",
+        "Peatonal": "#22c55e60",
+      };
+      const POT_WEIGHTS: Record<string, number> = {
+        "Arteria Principal": 3.5,
+        "Colectora": 2.5,
+        "Local Principal": 2,
+        "Local": 1.2,
+        "Servicio": 0.8,
+        "Peatonal": 1,
+      };
+      studyRoads.features.forEach((f: any) => {
+        const coords = f.geometry?.coordinates;
+        if (!coords || coords.length < 2) return;
+        const viaPot = f.properties?.via_pot || "Local";
+        const line = new google.maps.Polyline({
+          path: coords.map(([lng, lat]: number[]) => ({ lat, lng })),
+          strokeColor: POT_COLORS[viaPot] || "#ffffff20",
+          strokeWeight: POT_WEIGHTS[viaPot] || 1,
+          strokeOpacity: 0.7,
+          map,
+        });
+        line.addListener("click", () => {
+          iw.setContent(
+            `<b>${f.properties?.name || "Sin nombre"}</b><br>` +
+            `Clasificación: ${viaPot}` +
+            (f.properties?.lanes ? ` · ${f.properties.lanes} carriles` : "") +
+            (f.properties?.oneway === "yes" ? " · Un sentido" : "")
+          );
+          iw.setPosition(line.getPath().getAt(Math.floor(line.getPath().getLength() / 2)));
+          iw.open(map);
+        });
+        add(line);
+      });
+    }
+
+    // ── Parking polygons (OSM real shapes) ──
+    if (vis("parking-existing") && parkingPolygons) {
+      parkingPolygons.features.forEach((f: any) => {
+        if (f.geometry?.type === "Polygon") {
+          const poly = new google.maps.Polygon({
+            paths: f.geometry.coordinates[0].map(([lng, lat]: number[]) => ({ lat, lng })),
+            fillColor: "#f59e0b",
+            fillOpacity: 0.3,
+            strokeColor: "#f59e0b",
+            strokeWeight: 1.5,
+            map,
+          });
+          poly.addListener("click", () => {
+            const p = f.properties;
+            iw.setContent(
+              `<div style="max-width:200px"><b>${p.name || "Parqueadero"}</b><br>` +
+              `Área: ${Math.round(p.area_m2)} m²<br>` +
+              `Capacidad est.: ~${p.estimated_capacity} celdas<br>` +
+              (p.capacity_osm ? `Capacidad OSM: ${p.capacity_osm}<br>` : "") +
+              (p.fee ? `Tarifa: ${p.fee}<br>` : "") +
+              `<span style="color:#999;font-size:10px">Fuente: OpenStreetMap</span></div>`
+            );
+            // Center info window on polygon
+            const bounds = new google.maps.LatLngBounds();
+            f.geometry.coordinates[0].forEach(([lng, lat]: number[]) => bounds.extend({ lat, lng }));
+            iw.setPosition(bounds.getCenter());
+            iw.open(map);
           });
           add(poly);
         }
@@ -421,7 +595,7 @@ export function DiamanteMap({ scenario, hour, layerVisibility, onToggleLayer }: 
         add(marker);
       });
     }
-  }, [googleLoaded, scenario, hour, corridors, parking, commerce, hotels, sports, incidents, odRoutes, isochrones, comuna11, stadium, closureRoutes, attractions, vis]);
+  }, [googleLoaded, scenario, hour, corridors, parking, commerce, hotels, sports, incidents, odRoutes, isochrones, comuna11, stadium, closureRoutes, attractions, studyRoads, parkingPolygons, manzanas, vis]);
 
   return (
     <div className="relative h-full w-full">
@@ -442,7 +616,7 @@ export function DiamanteMap({ scenario, hour, layerVisibility, onToggleLayer }: 
 
       {/* Legend */}
       <div className="absolute bottom-6 right-3 z-10">
-        <MapLegend scenario={scenario} />
+        <MapLegend scenario={scenario} layerVisibility={layerVisibility} />
       </div>
     </div>
   );

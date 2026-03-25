@@ -10,14 +10,27 @@ export function calculateFinancials(
   params: FinancialParams = DEFAULT_FINANCIAL_PARAMS
 ): FinancialResult {
   // Parking base revenue
-  const parkingBase =
+  // Normal days (365 - events): base tariff × occupancy × hours
+  const normalDays = 365 - params.eventsPerYear;
+  const parkingBaseNormal =
     params.parkingSpaces *
     BASE_OCCUPANCY *
     OPERATING_HOURS *
     params.baseTariff *
-    365;
+    normalDays;
 
-  // Event surcharge
+  // Event days (52): full tariff $35,000/día reference (≈ $5,000/hr × 7hr avg stay)
+  const EVENT_DAILY_TARIFF = 35_000; // COP/day — reference: Obelisco $27K, premium $35K
+  const EVENT_OCCUPANCY = 0.85; // higher occupancy on event days
+  const parkingBaseEvents =
+    params.parkingSpaces *
+    EVENT_OCCUPANCY *
+    EVENT_DAILY_TARIFF *
+    params.eventsPerYear;
+
+  const parkingBase = parkingBaseNormal + parkingBaseEvents;
+
+  // Event surcharge (additional uplift beyond base)
   const parkingSurcharge = params.eventsPerYear * params.avgEventUplift;
 
   // Monthly passes

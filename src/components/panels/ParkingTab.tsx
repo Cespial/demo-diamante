@@ -8,6 +8,7 @@ import { useData } from "@/lib/hooks";
 import { formatNumber, formatCOP, hourLabel } from "@/lib/utils";
 import { getParkingDemand, getTariff } from "@/lib/scenario-engine";
 import { DEFAULT_FINANCIAL_PARAMS } from "@/data/financial-params";
+import { ATTRACTION_FACTOR_DEFAULT } from "@/data/diamante-config";
 import { Skeleton } from "@/components/ui/Skeleton";
 
 interface ParkingTabProps {
@@ -18,11 +19,15 @@ interface ParkingTabProps {
 export function ParkingTab({ scenario, hour }: ParkingTabProps) {
   const { data: parking, loading } = useData<ParkingPOI[]>("/data/parking-pois.json");
 
-  const totalSpaces = 1100;
-  const { demand, occupancy, overflow } = getParkingDemand(scenario, hour, totalSpaces);
-  const tariff = getTariff(scenario, hour, DEFAULT_FINANCIAL_PARAMS.baseTariff, DEFAULT_FINANCIAL_PARAMS.maxTariff);
-
+  const diamanteSpaces = DEFAULT_FINANCIAL_PARAMS.parkingSpaces; // 1,100
   const competitorSpaces = parking?.reduce((s, p) => s + p.capacity, 0) ?? 0;
+  const totalSupply = competitorSpaces + diamanteSpaces;
+  const attractionFactor = ATTRACTION_FACTOR_DEFAULT;
+
+  const { demand, occupancy, overflow } = getParkingDemand(
+    scenario, hour, totalSupply, 0, attractionFactor
+  );
+  const tariff = getTariff(scenario, hour, DEFAULT_FINANCIAL_PARAMS.baseTariff, DEFAULT_FINANCIAL_PARAMS.maxTariff);
 
   if (loading) {
     return (
@@ -40,15 +45,15 @@ export function ParkingTab({ scenario, hour }: ParkingTabProps) {
 
       <div className="grid grid-cols-2 gap-2">
         <KPICard
-          label="Ocupación Diamante"
-          value={`${Math.round(occupancy * 100)}%`}
-          subtitle={`${demand} / ${totalSpaces} celdas`}
+          label="Demanda Estimada"
+          value={formatNumber(demand)}
+          subtitle={`${Math.round(occupancy * 100)}% de oferta total (${formatNumber(totalSupply)})`}
           color={overflow ? "#ef4444" : "#f59e0b"}
         />
         <KPICard
-          label="Tarifa Actual"
-          value={formatCOP(tariff)}
-          subtitle={`Surcharge: ${scenario.surchargeMultiplier}x`}
+          label="Oferta Total Zona"
+          value={formatNumber(totalSupply)}
+          subtitle={`Competencia ${formatNumber(competitorSpaces)} + Diamante ${formatNumber(diamanteSpaces)}`}
           color="#22c55e"
         />
         <KPICard
@@ -58,17 +63,23 @@ export function ParkingTab({ scenario, hour }: ParkingTabProps) {
           color="#a855f7"
         />
         <KPICard
-          label="Ingreso/hr estimado"
-          value={formatCOP(demand * tariff)}
-          subtitle="Demanda x Tarifa"
+          label="Tarifa Actual"
+          value={formatCOP(tariff)}
+          subtitle={`Surcharge: ${scenario.surchargeMultiplier}x`}
           color="#3b82f6"
         />
       </div>
 
       <Card>
-        <CardHeader>Demanda vs Capacidad por Hora</CardHeader>
+        <CardHeader>Demanda vs Oferta por Hora</CardHeader>
         <CardContent>
-          <ParkingSupplyDemand scenario={scenario} totalSpaces={totalSpaces} currentHour={hour} />
+          <ParkingSupplyDemand
+            scenario={scenario}
+            totalSupply={totalSupply}
+            competitorSupply={competitorSpaces}
+            currentHour={hour}
+            attractionFactor={attractionFactor}
+          />
         </CardContent>
       </Card>
 
@@ -124,13 +135,13 @@ export function ParkingTab({ scenario, hour }: ParkingTabProps) {
         <CardHeader>Diamante — Propuesta de Valor</CardHeader>
         <CardContent>
           <ul className="space-y-1 text-xs text-white/60 list-disc list-inside">
-            <li>1,100 celdas en 2 sótanos bajo nivel de cancha</li>
-            <li>Tarifa dinámica: $5,000 base → $15,000 en eventos</li>
-            <li>Pases mensuales: 40 slots a $400K COP</li>
+            <li>{formatNumber(diamanteSpaces)} celdas en 2 sótanos bajo nivel de cancha</li>
+            <li>Tarifa dinámica: $5,000 base → hasta $15,000 en eventos</li>
+            <li>Referencia zona: Obelisco $27,000/día (~$4,500/hr)</li>
             <li>Servicio valet en eventos grandes (+$15K/servicio)</li>
             {overflow && (
               <li className="text-red-400 font-medium">
-                Demanda actual supera capacidad — oportunidad de precios premium
+                Demanda estimada supera oferta total — oportunidad de precios premium
               </li>
             )}
           </ul>

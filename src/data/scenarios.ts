@@ -38,7 +38,7 @@ export const SCENARIOS: Record<ScenarioId, Scenario> = {
     attendance: 45_000,
     vehicleMultiplier: 5.0,
     parkingDemand: 1100,
-    peakHour: 15,
+    peakHour: 17,
     peakSpread: 2.5,
     surchargeMultiplier: 3.0,
     valetActive: true,

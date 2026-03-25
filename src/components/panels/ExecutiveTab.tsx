@@ -1,12 +1,11 @@
 "use client";
 
-import type { Scenario, ParkingPOI, TrafficAforo, CommercePOI, ODRoute, MacroContext } from "@/types";
+import type { Scenario, ParkingPOI, TrafficAforo, CommercePOI, ODRoute, MacroContext, CalendarEvent } from "@/types";
 import { KPICard } from "@/components/ui/KPICard";
 import { Card, CardHeader, CardContent } from "@/components/ui/Card";
 import { useData } from "@/lib/hooks";
-import { formatCOP, formatNumber } from "@/lib/utils";
-import { calculateFinancials } from "@/lib/financial-model";
-import { getParkingDemand, applyScenarioToTraffic } from "@/lib/scenario-engine";
+import { formatNumber } from "@/lib/utils";
+import { applyScenarioToTraffic } from "@/lib/scenario-engine";
 
 interface ExecutiveTabProps {
   scenario: Scenario;
@@ -19,9 +18,7 @@ export function ExecutiveTab({ scenario, hour }: ExecutiveTabProps) {
   const { data: commerce } = useData<CommercePOI[]>("/data/commerce-pois.json");
   const { data: odRoutes } = useData<ODRoute[]>("/data/od-routes.json");
   const { data: macro } = useData<MacroContext>("/data/macro-context.json");
-
-  const financials = calculateFinancials();
-  const parkingInfo = getParkingDemand(scenario, hour, 1100);
+  const { data: events } = useData<CalendarEvent[]>("/data/events-calendar.json");
 
   // Aggregate traffic volume at current hour across all intersections
   const totalVolume = aforos
@@ -32,11 +29,20 @@ export function ExecutiveTab({ scenario, hour }: ExecutiveTabProps) {
       }, 0)
     : 0;
 
+  // Compute daily traffic (sum across 24 hours) for normal scenario
+  const dailyTrafficNormal = aforos
+    ? aforos.reduce((sum, a) => {
+        return sum + a.hourly.reduce((s, hv) => s + hv.total, 0);
+      }, 0)
+    : 0;
+
   const competitorSpaces = parking
     ? parking.reduce((s, p) => s + p.capacity, 0)
     : 0;
 
   const commerceCount = commerce?.length ?? 0;
+  const totalEvents = events?.length ?? 0;
+  const totalAttendance = events?.reduce((s, e) => s + e.attendance, 0) ?? 0;
 
   return (
     <div className="space-y-3">
@@ -50,57 +56,30 @@ export function ExecutiveTab({ scenario, hour }: ExecutiveTabProps) {
 
       <div className="grid grid-cols-2 gap-2">
         <KPICard
-          label="Ingreso Neto Anual"
-          value={formatCOP(financials.netIncome)}
-          subtitle="Parking + Comercio + Valet"
-          color="#22c55e"
-        />
-        <KPICard
           label="Vehículos/hr (ahora)"
           value={formatNumber(totalVolume)}
           subtitle={`Multiplicador: ${scenario.vehicleMultiplier}x`}
           color="#3b82f6"
         />
         <KPICard
-          label="Ocupación Parking"
-          value={`${Math.round(parkingInfo.occupancy * 100)}%`}
-          subtitle={`${parkingInfo.demand} / 1,100 celdas`}
-          trend={parkingInfo.overflow ? "up" : "neutral"}
-          trendValue={parkingInfo.overflow ? "OVERFLOW" : "OK"}
-          color={parkingInfo.overflow ? "#ef4444" : "#f59e0b"}
+          label="Tráfico diario (normal)"
+          value={formatNumber(dailyTrafficNormal)}
+          subtitle="Suma 24hrs — 41 intersecciones"
+          color="#60a5fa"
         />
         <KPICard
-          label="Competencia Parking"
+          label="Eventos/Año"
+          value={formatNumber(totalEvents)}
+          subtitle={`~${formatNumber(totalAttendance)} asistentes totales`}
+          color="#f59e0b"
+        />
+        <KPICard
+          label="Oferta Parking Zona"
           value={formatNumber(competitorSpaces)}
           subtitle={`${parking?.length ?? 0} parqueaderos en 1.5km`}
           color="#a855f7"
         />
       </div>
-
-      <Card>
-        <CardHeader>¿Dónde está mi plata?</CardHeader>
-        <CardContent>
-          <div className="space-y-2 text-xs text-white/60">
-            <RevenueRow label="Parking base" value={financials.parkingBase} pct={financials.parkingBase / financials.totalGross} />
-            <RevenueRow label="Surcharge eventos" value={financials.parkingSurcharge} pct={financials.parkingSurcharge / financials.totalGross} />
-            <RevenueRow label="Pases mensuales" value={financials.monthlyPasses} pct={financials.monthlyPasses / financials.totalGross} />
-            <RevenueRow label="Valet" value={financials.valetRevenue} pct={financials.valetRevenue / financials.totalGross} />
-            <RevenueRow label="Comercio renta" value={financials.commerceRent} pct={financials.commerceRent / financials.totalGross} />
-            <div className="border-t border-white/10 pt-2 flex justify-between font-semibold text-white">
-              <span>Total Bruto</span>
-              <span>{formatCOP(financials.totalGross)} /año</span>
-            </div>
-            <div className="flex justify-between text-red-400">
-              <span>Costos Operativos (30%)</span>
-              <span>-{formatCOP(financials.operatingCosts)}</span>
-            </div>
-            <div className="flex justify-between font-bold text-green-400 text-sm">
-              <span>Ingreso Neto</span>
-              <span>{formatCOP(financials.netIncome)} /año</span>
-            </div>
-          </div>
-        </CardContent>
-      </Card>
 
       <Card>
         <CardHeader>Contexto de la Zona</CardHeader>
@@ -127,8 +106,8 @@ export function ExecutiveTab({ scenario, hour }: ExecutiveTabProps) {
               <span className="text-white/80">{parking?.length ?? 0} ({formatNumber(competitorSpaces)} celdas)</span>
             </div>
             <div className="flex justify-between">
-              <span>Tarifa promedio zona</span>
-              <span className="text-white/80">$4,000–$8,000/hr</span>
+              <span>Referencia tarifa Obelisco</span>
+              <span className="text-white/80">$27,000/día</span>
             </div>
           </div>
         </CardContent>
@@ -148,41 +127,27 @@ export function ExecutiveTab({ scenario, hour }: ExecutiveTabProps) {
               ))}
             </div>
             <p className="text-[10px] text-white/30 mt-2">
-              Rutas con tráfico real — Google Routes API
+              Destino: Polígono Diamante · Fuente: Google Routes API
             </p>
           </CardContent>
         </Card>
       )}
 
       <Card>
-        <CardHeader>Conclusiones</CardHeader>
+        <CardHeader>Oportunidad</CardHeader>
         <CardContent>
           <ul className="space-y-1.5 text-xs text-white/60 list-disc list-inside">
-            <li>1,100 celdas de parqueadero generan <span className="text-green-400 font-medium">{formatCOP(financials.parkingBase + financials.parkingSurcharge + financials.monthlyPasses)}/año</span> combinando base + eventos + pases</li>
-            <li>Los ~55 eventos/año representan un <span className="text-blue-400 font-medium">uplift del {Math.round((financials.parkingSurcharge / financials.parkingBase) * 100)}%</span> sobre ingresos base</li>
-            <li>El comercio a nivel aporta <span className="text-purple-400 font-medium">{formatCOP(financials.commerceRent)}/año</span> con ocupación del 85%</li>
-            <li>La zona tiene alta demanda no atendida en eventos masivos (&gt;45K asistentes)</li>
+            <li>El Atanasio tiene <span className="text-red-400 font-bold">cero celdas</span> de parking formal dedicado</li>
+            <li>Oferta actual en 1.5km: <span className="text-blue-400 font-medium">{formatNumber(competitorSpaces)} celdas</span> en {parking?.length ?? 0} parqueaderos</li>
+            <li>~52 eventos/año con asistencia promedio de {formatNumber(totalEvents > 0 ? Math.round(totalAttendance / totalEvents) : 25000)} personas</li>
+            <li>Zona con alta demanda no atendida en eventos masivos (&gt;45K asistentes)</li>
+            <li>Parqueo informal (&quot;trapitos rojos&quot;) cobra ~$10,000/carro en vía pública</li>
           </ul>
+          <p className="text-[10px] text-white/25 mt-2 italic">
+            Nota: Cifras financieras disponibles en la pestaña Financiero y Decisión (estimaciones preliminares)
+          </p>
         </CardContent>
       </Card>
-    </div>
-  );
-}
-
-function RevenueRow({ label, value, pct }: { label: string; value: number; pct: number }) {
-  return (
-    <div className="flex items-center gap-2">
-      <div className="flex-1 flex justify-between">
-        <span>{label}</span>
-        <span className="text-white/80">{formatCOP(value)}</span>
-      </div>
-      <div className="w-16 h-1.5 rounded-full bg-white/10 overflow-hidden">
-        <div
-          className="h-full rounded-full bg-blue-500"
-          style={{ width: `${pct * 100}%` }}
-        />
-      </div>
-      <span className="w-8 text-right text-[10px]">{Math.round(pct * 100)}%</span>
     </div>
   );
 }

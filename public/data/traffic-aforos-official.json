@@ -1,10 +1,8 @@
 [
   {
-    "intersection": "(6.25555, -75.58131)",
+    "intersection": "Carrera 65 - Calle 49B",
     "lat": 6.25555,
     "lng": -75.58131,
-    "via_principal": "",
-    "via_secundaria": "",
     "hourly": [
       {
         "hour": 0,
@@ -14,7 +12,7 @@
         "camiones": 0,
         "bicicletas": 0,
         "total": 0,
-        "avgSpeed": 25
+        "avgSpeed": 30
       },
       {
         "hour": 1,
@@ -24,7 +22,7 @@
         "camiones": 0,
         "bicicletas": 0,
         "total": 0,
-        "avgSpeed": 25
+        "avgSpeed": 30
       },
       {
         "hour": 2,
@@ -34,7 +32,7 @@
         "camiones": 0,
         "bicicletas": 0,
         "total": 0,
-        "avgSpeed": 25
+        "avgSpeed": 30
       },
       {
         "hour": 3,
@@ -44,7 +42,7 @@
         "camiones": 0,
         "bicicletas": 0,
         "total": 0,
-        "avgSpeed": 25
+        "avgSpeed": 30
       },
       {
         "hour": 4,
@@ -54,7 +52,7 @@
         "camiones": 0,
         "bicicletas": 0,
         "total": 0,
-        "avgSpeed": 25
+        "avgSpeed": 30
       },
       {
         "hour": 5,
@@ -64,7 +62,7 @@
         "camiones": 0,
         "bicicletas": 0,
         "total": 0,
-        "avgSpeed": 25
+        "avgSpeed": 30
       },
       {
         "hour": 6,
@@ -74,7 +72,7 @@
         "camiones": 3,
         "bicicletas": 6,
         "total": 697,
-        "avgSpeed": 25
+        "avgSpeed": 30
       },
       {
         "hour": 7,
@@ -84,7 +82,7 @@
         "camiones": 3,
         "bicicletas": 6,
         "total": 754,
-        "avgSpeed": 25
+        "avgSpeed": 30
       },
       {
         "hour": 8,
@@ -94,7 +92,7 @@
         "camiones": 4,
         "bicicletas": 2,
         "total": 620,
-        "avgSpeed": 25
+        "avgSpeed": 30
       },
       {
         "hour": 9,
@@ -104,7 +102,7 @@
         "camiones": 6,
         "bicicletas": 3,
         "total": 580,
-        "avgSpeed": 25
+        "avgSpeed": 30
       },
       {
         "hour": 10,
@@ -114,7 +112,7 @@
         "camiones": 7,
         "bicicletas": 2,
         "total": 553,
-        "avgSpeed": 25
+        "avgSpeed": 30
       },
       {
         "hour": 11,
@@ -124,7 +122,7 @@
         "camiones": 15,
         "bicicletas": 2,
         "total": 553,
-        "avgSpeed": 25
+        "avgSpeed": 30
       },
       {
         "hour": 12,
@@ -134,7 +132,7 @@
         "camiones": 11,
         "bicicletas": 3,
         "total": 578,
-        "avgSpeed": 25
+        "avgSpeed": 30
       },
       {
         "hour": 13,
@@ -144,7 +142,7 @@
         "camiones": 10,
         "bicicletas": 4,
         "total": 647,
-        "avgSpeed": 25
+        "avgSpeed": 30
       },
       {
         "hour": 14,
@@ -154,7 +152,7 @@
         "camiones": 9,
         "bicicletas": 2,
         "total": 641,
-        "avgSpeed": 25
+        "avgSpeed": 30
       },
       {
         "hour": 15,
@@ -164,7 +162,7 @@
         "camiones": 10,
         "bicicletas": 4,
         "total": 652,
-        "avgSpeed": 25
+        "avgSpeed": 30
       },
       {
         "hour": 16,
@@ -174,7 +172,7 @@
         "camiones": 8,
         "bicicletas": 5,
         "total": 688,
-        "avgSpeed": 25
+        "avgSpeed": 30
       },
       {
         "hour": 17,
@@ -184,7 +182,7 @@
         "camiones": 9,
         "bicicletas": 8,
         "total": 876,
-        "avgSpeed": 25
+        "avgSpeed": 30
       },
       {
         "hour": 18,
@@ -194,7 +192,7 @@
         "camiones": 8,
         "bicicletas": 7,
         "total": 892,
-        "avgSpeed": 25
+        "avgSpeed": 30
       },
       {
         "hour": 19,
@@ -204,7 +202,7 @@
         "camiones": 3,
         "bicicletas": 3,
         "total": 579,
-        "avgSpeed": 25
+        "avgSpeed": 30
       },
       {
         "hour": 20,
@@ -214,7 +212,7 @@
         "camiones": 0,
         "bicicletas": 0,
         "total": 0,
-        "avgSpeed": 25
+        "avgSpeed": 30
       },
       {
         "hour": 21,
@@ -224,7 +222,7 @@
         "camiones": 0,
         "bicicletas": 0,
         "total": 0,
-        "avgSpeed": 25
+        "avgSpeed": 30
       },
       {
         "hour": 22,
@@ -234,7 +232,7 @@
         "camiones": 0,
         "bicicletas": 0,
         "total": 0,
-        "avgSpeed": 25
+        "avgSpeed": 30
       },
       {
         "hour": 23,
@@ -244,23 +242,17 @@
         "camiones": 0,
         "bicicletas": 0,
         "total": 0,
-        "avgSpeed": 25
+        "avgSpeed": 30
       }
     ],
-    "tpd": 9310,
-    "hmd_hora": 18,
-    "hmd_total": 892,
-    "pct_autos": 55,
-    "pct_motos": 41,
-    "n_records": 280,
-    "source": "SIMM_oficial_aforos_2018_2019"
+    "source": "SIMM_MEData_oficial",
+    "via_principal": "Carrera 65",
+    "via_secundaria": "Calle 49B"
   },
   {
-    "intersection": "(6.25607, -75.58103)",
+    "intersection": "Carrera 65 - Calle 50",
     "lat": 6.25607,
     "lng": -75.58103,
-    "via_principal": "",
-    "via_secundaria": "",
     "hourly": [
       {
         "hour": 0,
@@ -270,7 +262,7 @@
         "camiones": 0,
         "bicicletas": 0,
         "total": 0,
-        "avgSpeed": 25
+        "avgSpeed": 30
       },
       {
         "hour": 1,
@@ -280,7 +272,7 @@
         "camiones": 0,
         "bicicletas": 0,
         "total": 0,
-        "avgSpeed": 25
+        "avgSpeed": 30
       },
       {
         "hour": 2,
@@ -290,7 +282,7 @@
         "camiones": 0,
         "bicicletas": 0,
         "total": 0,
-        "avgSpeed": 25
+        "avgSpeed": 30
       },
       {
         "hour": 3,
@@ -300,7 +292,7 @@
         "camiones": 0,
         "bicicletas": 0,
         "total": 0,
-        "avgSpeed": 25
+        "avgSpeed": 30
       },
       {
         "hour": 4,
@@ -310,7 +302,7 @@
         "camiones": 0,
         "bicicletas": 0,
         "total": 0,
-        "avgSpeed": 25
+        "avgSpeed": 30
       },
       {
         "hour": 5,
@@ -320,3219 +312,147 @@
         "camiones": 0,
         "bicicletas": 0,
         "total": 0,
-        "avgSpeed": 25
+        "avgSpeed": 30
       },
       {
         "hour": 6,
-        "autos": 561,
-        "motos": 338,
-        "buses": 83,
-        "camiones": 13,
-        "bicicletas": 78,
-        "total": 1073,
-        "avgSpeed": 25
+        "autos": 591,
+        "motos": 451,
+        "buses": 80,
+        "camiones": 14,
+        "bicicletas": 54,
+        "total": 1188,
+        "avgSpeed": 30
       },
       {
         "hour": 7,
-        "autos": 527,
-        "motos": 439,
-        "buses": 89,
+        "autos": 556,
+        "motos": 486,
+        "buses": 92,
         "camiones": 17,
-        "bicicletas": 89,
-        "total": 1162,
-        "avgSpeed": 25
+        "bicicletas": 49,
+        "total": 1200,
+        "avgSpeed": 30
       },
       {
         "hour": 8,
-        "autos": 523,
-        "motos": 343,
-        "buses": 90,
-        "camiones": 18,
-        "bicicletas": 77,
-        "total": 1052,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 9,
-        "autos": 448,
-        "motos": 269,
-        "buses": 81,
-        "camiones": 20,
-        "bicicletas": 76,
-        "total": 895,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 10,
-        "autos": 456,
-        "motos": 269,
-        "buses": 77,
-        "camiones": 21,
-        "bicicletas": 73,
-        "total": 897,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 11,
-        "autos": 469,
-        "motos": 269,
-        "buses": 71,
-        "camiones": 36,
-        "bicicletas": 91,
-        "total": 936,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 12,
-        "autos": 494,
-        "motos": 287,
-        "buses": 72,
-        "camiones": 19,
-        "bicicletas": 87,
-        "total": 958,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 13,
-        "autos": 501,
-        "motos": 254,
-        "buses": 76,
-        "camiones": 17,
-        "bicicletas": 87,
-        "total": 933,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 14,
-        "autos": 531,
-        "motos": 257,
-        "buses": 69,
-        "camiones": 15,
-        "bicicletas": 99,
-        "total": 970,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 15,
-        "autos": 530,
-        "motos": 274,
-        "buses": 71,
-        "camiones": 19,
-        "bicicletas": 113,
-        "total": 1006,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 16,
-        "autos": 560,
-        "motos": 296,
-        "buses": 80,
-        "camiones": 14,
-        "bicicletas": 146,
-        "total": 1096,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 17,
-        "autos": 517,
-        "motos": 431,
+        "autos": 550,
+        "motos": 394,
         "buses": 85,
-        "camiones": 16,
-        "bicicletas": 261,
-        "total": 1310,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 18,
-        "autos": 442,
-        "motos": 411,
-        "buses": 91,
-        "camiones": 10,
-        "bicicletas": 295,
-        "total": 1249,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 19,
-        "autos": 526,
-        "motos": 233,
-        "buses": 68,
-        "camiones": 7,
-        "bicicletas": 135,
-        "total": 969,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 20,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 21,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 22,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 23,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      }
-    ],
-    "tpd": 14506,
-    "hmd_hora": 17,
-    "hmd_total": 1310,
-    "pct_autos": 49,
-    "pct_motos": 30,
-    "n_records": 392,
-    "source": "SIMM_oficial_aforos_2018_2019"
-  },
-  {
-    "intersection": "(6.25660, -75.58080)",
-    "lat": 6.2566,
-    "lng": -75.5808,
-    "via_principal": "",
-    "via_secundaria": "",
-    "hourly": [
-      {
-        "hour": 0,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 1,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 2,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 3,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 4,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 5,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 6,
-        "autos": 278,
-        "motos": 200,
-        "buses": 8,
-        "camiones": 10,
-        "bicicletas": 3,
-        "total": 499,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 7,
-        "autos": 315,
-        "motos": 313,
-        "buses": 12,
-        "camiones": 11,
-        "bicicletas": 5,
-        "total": 656,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 8,
-        "autos": 332,
-        "motos": 196,
-        "buses": 13,
-        "camiones": 13,
-        "bicicletas": 4,
-        "total": 559,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 9,
-        "autos": 258,
-        "motos": 150,
-        "buses": 13,
-        "camiones": 9,
-        "bicicletas": 3,
-        "total": 433,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 10,
-        "autos": 232,
-        "motos": 139,
-        "buses": 9,
-        "camiones": 13,
-        "bicicletas": 2,
-        "total": 396,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 11,
-        "autos": 233,
-        "motos": 154,
-        "buses": 7,
-        "camiones": 8,
-        "bicicletas": 5,
-        "total": 406,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 12,
-        "autos": 265,
-        "motos": 164,
-        "buses": 8,
-        "camiones": 10,
-        "bicicletas": 6,
-        "total": 454,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 13,
-        "autos": 245,
-        "motos": 159,
-        "buses": 7,
-        "camiones": 6,
-        "bicicletas": 3,
-        "total": 420,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 14,
-        "autos": 265,
-        "motos": 180,
-        "buses": 9,
-        "camiones": 11,
-        "bicicletas": 6,
-        "total": 471,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 15,
-        "autos": 275,
-        "motos": 174,
-        "buses": 9,
-        "camiones": 10,
-        "bicicletas": 3,
-        "total": 470,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 16,
-        "autos": 317,
-        "motos": 229,
-        "buses": 8,
-        "camiones": 8,
-        "bicicletas": 5,
-        "total": 568,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 17,
-        "autos": 333,
-        "motos": 377,
-        "buses": 10,
-        "camiones": 5,
-        "bicicletas": 7,
-        "total": 733,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 18,
-        "autos": 235,
-        "motos": 331,
-        "buses": 11,
-        "camiones": 6,
-        "bicicletas": 4,
-        "total": 587,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 19,
-        "autos": 239,
-        "motos": 169,
-        "buses": 8,
-        "camiones": 3,
-        "bicicletas": 4,
-        "total": 423,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 20,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 21,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 22,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 23,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      }
-    ],
-    "tpd": 7075,
-    "hmd_hora": 17,
-    "hmd_total": 733,
-    "pct_autos": 54,
-    "pct_motos": 41,
-    "n_records": 280,
-    "source": "SIMM_oficial_aforos_2018_2019"
-  },
-  {
-    "intersection": "(6.25995, -75.59040)",
-    "lat": 6.25995,
-    "lng": -75.5904,
-    "via_principal": "",
-    "via_secundaria": "",
-    "hourly": [
-      {
-        "hour": 0,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 1,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 2,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 3,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 4,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 5,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 6,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 7,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 8,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 9,
-        "autos": 141,
-        "motos": 48,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 189,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 10,
-        "autos": 166,
-        "motos": 68,
-        "buses": 0,
-        "camiones": 2,
-        "bicicletas": 0,
-        "total": 236,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 11,
-        "autos": 177,
-        "motos": 92,
-        "buses": 0,
-        "camiones": 4,
-        "bicicletas": 0,
-        "total": 272,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 12,
-        "autos": 180,
-        "motos": 90,
-        "buses": 1,
-        "camiones": 2,
-        "bicicletas": 0,
-        "total": 274,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 13,
-        "autos": 165,
-        "motos": 76,
-        "buses": 0,
-        "camiones": 4,
-        "bicicletas": 0,
-        "total": 246,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 14,
-        "autos": 134,
-        "motos": 71,
-        "buses": 0,
-        "camiones": 2,
-        "bicicletas": 0,
-        "total": 207,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 15,
-        "autos": 122,
-        "motos": 62,
-        "buses": 0,
-        "camiones": 1,
-        "bicicletas": 0,
-        "total": 185,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 16,
-        "autos": 142,
-        "motos": 56,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 198,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 17,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 18,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 19,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 20,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 21,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 22,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 23,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      }
-    ],
-    "tpd": 1807,
-    "hmd_hora": 12,
-    "hmd_total": 274,
-    "pct_autos": 68,
-    "pct_motos": 31,
-    "n_records": 60,
-    "source": "SIMM_oficial_aforos_2018_2019"
-  },
-  {
-    "intersection": "(6.26017, -75.59095)",
-    "lat": 6.26017,
-    "lng": -75.59095,
-    "via_principal": "",
-    "via_secundaria": "",
-    "hourly": [
-      {
-        "hour": 0,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 1,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 2,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 3,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 4,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 5,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 6,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 7,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 8,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 9,
-        "autos": 17,
-        "motos": 15,
-        "buses": 0,
-        "camiones": 1,
-        "bicicletas": 0,
-        "total": 33,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 10,
-        "autos": 19,
-        "motos": 8,
-        "buses": 0,
-        "camiones": 1,
-        "bicicletas": 0,
-        "total": 28,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 11,
-        "autos": 21,
-        "motos": 14,
-        "buses": 0,
-        "camiones": 2,
-        "bicicletas": 0,
-        "total": 38,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 12,
-        "autos": 25,
-        "motos": 16,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 42,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 13,
-        "autos": 28,
-        "motos": 12,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 40,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 14,
-        "autos": 24,
-        "motos": 14,
-        "buses": 0,
-        "camiones": 1,
-        "bicicletas": 0,
-        "total": 38,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 15,
-        "autos": 16,
-        "motos": 12,
-        "buses": 0,
-        "camiones": 1,
-        "bicicletas": 0,
-        "total": 30,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 16,
-        "autos": 11,
-        "motos": 9,
-        "buses": 0,
-        "camiones": 1,
-        "bicicletas": 0,
-        "total": 21,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 17,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 18,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 19,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 20,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 21,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 22,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 23,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      }
-    ],
-    "tpd": 270,
-    "hmd_hora": 12,
-    "hmd_total": 42,
-    "pct_autos": 60,
-    "pct_motos": 37,
-    "n_records": 60,
-    "source": "SIMM_oficial_aforos_2018_2019"
-  },
-  {
-    "intersection": "(6.26044, -75.59152)",
-    "lat": 6.26044,
-    "lng": -75.59152,
-    "via_principal": "",
-    "via_secundaria": "",
-    "hourly": [
-      {
-        "hour": 0,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 1,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 2,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 3,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 4,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 5,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 6,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 7,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 8,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 9,
-        "autos": 57,
-        "motos": 19,
-        "buses": 0,
-        "camiones": 1,
-        "bicicletas": 0,
-        "total": 77,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 10,
-        "autos": 88,
-        "motos": 33,
-        "buses": 0,
-        "camiones": 1,
-        "bicicletas": 0,
-        "total": 122,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 11,
-        "autos": 89,
-        "motos": 38,
-        "buses": 0,
-        "camiones": 3,
-        "bicicletas": 0,
-        "total": 130,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 12,
-        "autos": 79,
-        "motos": 38,
-        "buses": 0,
-        "camiones": 1,
-        "bicicletas": 0,
-        "total": 118,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 13,
-        "autos": 78,
-        "motos": 35,
-        "buses": 0,
-        "camiones": 2,
-        "bicicletas": 0,
-        "total": 115,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 14,
-        "autos": 76,
-        "motos": 38,
-        "buses": 0,
-        "camiones": 2,
-        "bicicletas": 0,
-        "total": 116,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 15,
-        "autos": 69,
-        "motos": 29,
-        "buses": 0,
-        "camiones": 1,
-        "bicicletas": 0,
-        "total": 99,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 16,
-        "autos": 73,
-        "motos": 25,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 98,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 17,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 18,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 19,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 20,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 21,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 22,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 23,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      }
-    ],
-    "tpd": 875,
-    "hmd_hora": 11,
-    "hmd_total": 130,
-    "pct_autos": 70,
-    "pct_motos": 29,
-    "n_records": 124,
-    "source": "SIMM_oficial_aforos_2018_2019"
-  },
-  {
-    "intersection": "(6.26118, -75.59306)",
-    "lat": 6.26118,
-    "lng": -75.59306,
-    "via_principal": "",
-    "via_secundaria": "",
-    "hourly": [
-      {
-        "hour": 0,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 1,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 2,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 3,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 4,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 5,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 6,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 7,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 8,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 9,
-        "autos": 43,
-        "motos": 15,
-        "buses": 0,
-        "camiones": 2,
-        "bicicletas": 0,
-        "total": 60,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 10,
-        "autos": 51,
-        "motos": 25,
-        "buses": 0,
-        "camiones": 2,
-        "bicicletas": 0,
-        "total": 79,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 11,
-        "autos": 41,
-        "motos": 12,
-        "buses": 0,
-        "camiones": 2,
-        "bicicletas": 0,
-        "total": 55,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 12,
-        "autos": 44,
-        "motos": 15,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 60,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 13,
-        "autos": 40,
-        "motos": 17,
-        "buses": 0,
-        "camiones": 1,
-        "bicicletas": 0,
-        "total": 58,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 14,
-        "autos": 60,
-        "motos": 25,
-        "buses": 0,
-        "camiones": 1,
-        "bicicletas": 0,
-        "total": 86,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 15,
-        "autos": 47,
-        "motos": 15,
-        "buses": 0,
-        "camiones": 1,
-        "bicicletas": 0,
-        "total": 63,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 16,
-        "autos": 48,
-        "motos": 15,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 63,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 17,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 18,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 19,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 20,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 21,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 22,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 23,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      }
-    ],
-    "tpd": 524,
-    "hmd_hora": 14,
-    "hmd_total": 86,
-    "pct_autos": 71,
-    "pct_motos": 27,
-    "n_records": 158,
-    "source": "SIMM_oficial_aforos_2018_2019"
-  },
-  {
-    "intersection": "(6.26141, -75.59353)",
-    "lat": 6.26141,
-    "lng": -75.59353,
-    "via_principal": "",
-    "via_secundaria": "",
-    "hourly": [
-      {
-        "hour": 0,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 1,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 2,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 3,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 4,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 5,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 6,
-        "autos": 19,
-        "motos": 8,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 28,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 7,
-        "autos": 39,
-        "motos": 25,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 65,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 8,
-        "autos": 44,
-        "motos": 20,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 64,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 9,
-        "autos": 35,
-        "motos": 14,
-        "buses": 0,
-        "camiones": 1,
-        "bicicletas": 0,
-        "total": 51,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 10,
-        "autos": 38,
-        "motos": 17,
-        "buses": 0,
-        "camiones": 1,
-        "bicicletas": 0,
-        "total": 56,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 11,
-        "autos": 31,
-        "motos": 10,
-        "buses": 0,
-        "camiones": 1,
-        "bicicletas": 0,
-        "total": 42,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 12,
-        "autos": 37,
-        "motos": 14,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 52,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 13,
-        "autos": 30,
-        "motos": 14,
-        "buses": 0,
-        "camiones": 1,
-        "bicicletas": 0,
-        "total": 45,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 14,
-        "autos": 40,
-        "motos": 17,
-        "buses": 0,
-        "camiones": 1,
-        "bicicletas": 0,
-        "total": 58,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 15,
-        "autos": 37,
-        "motos": 12,
-        "buses": 0,
-        "camiones": 1,
-        "bicicletas": 0,
-        "total": 49,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 16,
-        "autos": 35,
-        "motos": 19,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 54,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 17,
-        "autos": 45,
-        "motos": 31,
-        "buses": 0,
-        "camiones": 1,
-        "bicicletas": 0,
-        "total": 78,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 18,
-        "autos": 33,
-        "motos": 23,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 56,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 19,
-        "autos": 31,
-        "motos": 14,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 45,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 20,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 21,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 22,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 23,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      }
-    ],
-    "tpd": 743,
-    "hmd_hora": 17,
-    "hmd_total": 78,
-    "pct_autos": 66,
-    "pct_motos": 32,
-    "n_records": 831,
-    "source": "SIMM_oficial_aforos_2018_2019"
-  },
-  {
-    "intersection": "(6.25824, -75.59510)",
-    "lat": 6.25824,
-    "lng": -75.5951,
-    "via_principal": "",
-    "via_secundaria": "",
-    "hourly": [
-      {
-        "hour": 0,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 1,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 2,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 3,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 4,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 5,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 6,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 7,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 8,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 9,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 10,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 11,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 12,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 13,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 14,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 15,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 16,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 17,
-        "autos": 620,
-        "motos": 503,
-        "buses": 11,
-        "camiones": 8,
-        "bicicletas": 0,
-        "total": 1141,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 18,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 19,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 20,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 21,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 22,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 23,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      }
-    ],
-    "tpd": 1141,
-    "hmd_hora": 17,
-    "hmd_total": 1141,
-    "pct_autos": 54,
-    "pct_motos": 44,
-    "n_records": 12,
-    "source": "SIMM_oficial_aforos_2018_2019"
-  },
-  {
-    "intersection": "(6.25940, -75.59456)",
-    "lat": 6.2594,
-    "lng": -75.59456,
-    "via_principal": "",
-    "via_secundaria": "",
-    "hourly": [
-      {
-        "hour": 0,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 1,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 2,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 3,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 4,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 5,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 6,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 7,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 8,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 9,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 10,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 11,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 12,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 13,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 14,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 15,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 16,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 17,
-        "autos": 53,
-        "motos": 28,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 81,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 18,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 19,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 20,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 21,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 22,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 23,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      }
-    ],
-    "tpd": 81,
-    "hmd_hora": 17,
-    "hmd_total": 81,
-    "pct_autos": 65,
-    "pct_motos": 35,
-    "n_records": 24,
-    "source": "SIMM_oficial_aforos_2018_2019"
-  },
-  {
-    "intersection": "(6.25991, -75.59430)",
-    "lat": 6.25991,
-    "lng": -75.5943,
-    "via_principal": "",
-    "via_secundaria": "",
-    "hourly": [
-      {
-        "hour": 0,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 1,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 2,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 3,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 4,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 5,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 6,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 7,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 8,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 9,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 10,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 11,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 12,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 13,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 14,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 15,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 16,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 17,
-        "autos": 57,
-        "motos": 28,
-        "buses": 0,
-        "camiones": 1,
-        "bicicletas": 0,
-        "total": 86,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 18,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 19,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 20,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 21,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 22,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 23,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      }
-    ],
-    "tpd": 86,
-    "hmd_hora": 17,
-    "hmd_total": 86,
-    "pct_autos": 66,
-    "pct_motos": 33,
-    "n_records": 24,
-    "source": "SIMM_oficial_aforos_2018_2019"
-  },
-  {
-    "intersection": "(6.26050, -75.58509)",
-    "lat": 6.2605,
-    "lng": -75.58509,
-    "via_principal": "",
-    "via_secundaria": "",
-    "hourly": [
-      {
-        "hour": 0,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 1,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 2,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 3,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 4,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 5,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 6,
-        "autos": 299,
-        "motos": 245,
-        "buses": 40,
-        "camiones": 13,
-        "bicicletas": 15,
-        "total": 612,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 7,
-        "autos": 284,
-        "motos": 239,
-        "buses": 49,
-        "camiones": 15,
-        "bicicletas": 15,
-        "total": 603,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 8,
-        "autos": 273,
-        "motos": 176,
-        "buses": 46,
-        "camiones": 19,
-        "bicicletas": 8,
-        "total": 522,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 9,
-        "autos": 268,
-        "motos": 158,
-        "buses": 38,
         "camiones": 20,
-        "bicicletas": 9,
-        "total": 493,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 10,
-        "autos": 236,
-        "motos": 153,
-        "buses": 39,
-        "camiones": 20,
-        "bicicletas": 8,
-        "total": 456,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 11,
-        "autos": 231,
-        "motos": 142,
-        "buses": 36,
-        "camiones": 19,
-        "bicicletas": 6,
-        "total": 435,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 12,
-        "autos": 247,
-        "motos": 167,
-        "buses": 36,
-        "camiones": 21,
-        "bicicletas": 8,
-        "total": 479,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 13,
-        "autos": 252,
-        "motos": 158,
-        "buses": 34,
-        "camiones": 18,
-        "bicicletas": 9,
-        "total": 471,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 14,
-        "autos": 270,
-        "motos": 181,
-        "buses": 36,
-        "camiones": 19,
-        "bicicletas": 8,
-        "total": 515,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 15,
-        "autos": 265,
-        "motos": 173,
-        "buses": 37,
-        "camiones": 17,
-        "bicicletas": 9,
-        "total": 501,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 16,
-        "autos": 295,
-        "motos": 249,
-        "buses": 35,
-        "camiones": 16,
-        "bicicletas": 12,
-        "total": 607,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 17,
-        "autos": 271,
-        "motos": 386,
-        "buses": 36,
-        "camiones": 13,
-        "bicicletas": 22,
-        "total": 727,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 18,
-        "autos": 257,
-        "motos": 345,
-        "buses": 40,
-        "camiones": 11,
-        "bicicletas": 18,
-        "total": 670,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 19,
-        "autos": 277,
-        "motos": 292,
-        "buses": 34,
-        "camiones": 7,
-        "bicicletas": 14,
-        "total": 624,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 20,
-        "autos": 233,
-        "motos": 214,
-        "buses": 22,
-        "camiones": 4,
-        "bicicletas": 14,
-        "total": 487,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 21,
-        "autos": 190,
-        "motos": 155,
-        "buses": 15,
-        "camiones": 3,
-        "bicicletas": 7,
-        "total": 369,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 22,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 23,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      }
-    ],
-    "tpd": 8571,
-    "hmd_hora": 17,
-    "hmd_total": 727,
-    "pct_autos": 48,
-    "pct_motos": 40,
-    "n_records": 434,
-    "source": "SIMM_oficial_aforos_2018_2019"
-  },
-  {
-    "intersection": "(6.25901, -75.58587)",
-    "lat": 6.25901,
-    "lng": -75.58587,
-    "via_principal": "",
-    "via_secundaria": "",
-    "hourly": [
-      {
-        "hour": 0,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 1,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 2,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 3,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 4,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 5,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 6,
-        "autos": 216,
-        "motos": 221,
-        "buses": 18,
-        "camiones": 4,
-        "bicicletas": 23,
-        "total": 483,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 7,
-        "autos": 177,
-        "motos": 219,
-        "buses": 20,
-        "camiones": 5,
-        "bicicletas": 24,
-        "total": 445,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 8,
-        "autos": 180,
-        "motos": 121,
-        "buses": 19,
-        "camiones": 9,
-        "bicicletas": 15,
-        "total": 344,
-        "avgSpeed": 25
+        "bicicletas": 41,
+        "total": 1090,
+        "avgSpeed": 30
       },
       {
         "hour": 9,
-        "autos": 180,
-        "motos": 109,
-        "buses": 17,
-        "camiones": 10,
-        "bicicletas": 13,
-        "total": 329,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 10,
-        "autos": 164,
-        "motos": 88,
-        "buses": 15,
-        "camiones": 5,
-        "bicicletas": 11,
-        "total": 283,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 11,
-        "autos": 152,
-        "motos": 90,
-        "buses": 15,
-        "camiones": 6,
-        "bicicletas": 12,
-        "total": 274,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 12,
-        "autos": 156,
-        "motos": 87,
-        "buses": 14,
-        "camiones": 5,
-        "bicicletas": 12,
-        "total": 275,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 13,
-        "autos": 158,
-        "motos": 107,
-        "buses": 14,
-        "camiones": 7,
-        "bicicletas": 13,
-        "total": 299,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 14,
-        "autos": 168,
-        "motos": 100,
-        "buses": 15,
-        "camiones": 5,
-        "bicicletas": 12,
-        "total": 300,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 15,
-        "autos": 174,
-        "motos": 92,
-        "buses": 16,
-        "camiones": 6,
-        "bicicletas": 10,
-        "total": 298,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 16,
-        "autos": 175,
-        "motos": 101,
-        "buses": 16,
-        "camiones": 6,
-        "bicicletas": 12,
-        "total": 309,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 17,
-        "autos": 163,
-        "motos": 148,
-        "buses": 17,
-        "camiones": 4,
-        "bicicletas": 20,
-        "total": 352,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 18,
-        "autos": 132,
-        "motos": 127,
-        "buses": 17,
-        "camiones": 2,
-        "bicicletas": 20,
-        "total": 298,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 19,
-        "autos": 156,
-        "motos": 101,
-        "buses": 15,
-        "camiones": 2,
-        "bicicletas": 16,
-        "total": 290,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 20,
-        "autos": 119,
-        "motos": 85,
-        "buses": 9,
-        "camiones": 1,
-        "bicicletas": 14,
-        "total": 229,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 21,
-        "autos": 98,
-        "motos": 74,
-        "buses": 6,
-        "camiones": 1,
-        "bicicletas": 11,
-        "total": 190,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 22,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 23,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      }
-    ],
-    "tpd": 4998,
-    "hmd_hora": 6,
-    "hmd_total": 483,
-    "pct_autos": 51,
-    "pct_motos": 37,
-    "n_records": 682,
-    "source": "SIMM_oficial_aforos_2018_2019"
-  },
-  {
-    "intersection": "(6.25610, -75.58109)",
-    "lat": 6.2561,
-    "lng": -75.58109,
-    "via_principal": "",
-    "via_secundaria": "",
-    "hourly": [
-      {
-        "hour": 0,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 1,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 2,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 3,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 4,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 5,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 6,
-        "autos": 651,
-        "motos": 675,
-        "buses": 74,
-        "camiones": 15,
-        "bicicletas": 4,
-        "total": 1419,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 7,
-        "autos": 585,
-        "motos": 533,
-        "buses": 96,
-        "camiones": 17,
-        "bicicletas": 8,
-        "total": 1238,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 8,
-        "autos": 577,
-        "motos": 445,
-        "buses": 80,
-        "camiones": 21,
-        "bicicletas": 4,
-        "total": 1127,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 9,
-        "autos": 590,
-        "motos": 447,
-        "buses": 72,
-        "camiones": 29,
-        "bicicletas": 6,
-        "total": 1143,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 10,
-        "autos": 590,
-        "motos": 450,
-        "buses": 77,
-        "camiones": 30,
-        "bicicletas": 5,
-        "total": 1153,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 11,
-        "autos": 570,
-        "motos": 463,
-        "buses": 73,
-        "camiones": 28,
-        "bicicletas": 6,
-        "total": 1139,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 12,
-        "autos": 553,
-        "motos": 491,
-        "buses": 68,
-        "camiones": 28,
-        "bicicletas": 5,
-        "total": 1144,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 13,
-        "autos": 554,
-        "motos": 462,
-        "buses": 69,
-        "camiones": 31,
-        "bicicletas": 7,
-        "total": 1122,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 14,
-        "autos": 605,
-        "motos": 470,
-        "buses": 69,
-        "camiones": 28,
-        "bicicletas": 6,
-        "total": 1179,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 15,
-        "autos": 575,
-        "motos": 527,
-        "buses": 69,
-        "camiones": 25,
-        "bicicletas": 5,
-        "total": 1201,
-        "avgSpeed": 25
-      },
-      {
-        "hour": 16,
-        "autos": 558,
-        "motos": 570,
-        "buses": 69,
+        "autos": 519,
+        "motos": 358,
+        "buses": 76,
         "camiones": 24,
-        "bicicletas": 6,
-        "total": 1227,
-        "avgSpeed": 25
+        "bicicletas": 41,
+        "total": 1019,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 10,
+        "autos": 523,
+        "motos": 360,
+        "buses": 77,
+        "camiones": 26,
+        "bicicletas": 39,
+        "total": 1025,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 11,
+        "autos": 519,
+        "motos": 366,
+        "buses": 72,
+        "camiones": 32,
+        "bicicletas": 48,
+        "total": 1038,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 12,
+        "autos": 523,
+        "motos": 389,
+        "buses": 70,
+        "camiones": 23,
+        "bicicletas": 46,
+        "total": 1051,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 13,
+        "autos": 527,
+        "motos": 358,
+        "buses": 72,
+        "camiones": 24,
+        "bicicletas": 47,
+        "total": 1028,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 14,
+        "autos": 568,
+        "motos": 363,
+        "buses": 69,
+        "camiones": 21,
+        "bicicletas": 52,
+        "total": 1074,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 15,
+        "autos": 552,
+        "motos": 400,
+        "buses": 70,
+        "camiones": 22,
+        "bicicletas": 59,
+        "total": 1103,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 16,
+        "autos": 559,
+        "motos": 433,
+        "buses": 74,
+        "camiones": 19,
+        "bicicletas": 76,
+        "total": 1161,
+        "avgSpeed": 30
       },
       {
         "hour": 17,
-        "autos": 540,
-        "motos": 720,
-        "buses": 72,
-        "camiones": 14,
-        "bicicletas": 8,
-        "total": 1355,
-        "avgSpeed": 25
+        "autos": 529,
+        "motos": 575,
+        "buses": 79,
+        "camiones": 15,
+        "bicicletas": 134,
+        "total": 1332,
+        "avgSpeed": 30
       },
       {
         "hour": 18,
-        "autos": 485,
-        "motos": 581,
-        "buses": 81,
-        "camiones": 14,
-        "bicicletas": 6,
-        "total": 1167,
-        "avgSpeed": 25
+        "autos": 464,
+        "motos": 496,
+        "buses": 86,
+        "camiones": 12,
+        "bicicletas": 150,
+        "total": 1208,
+        "avgSpeed": 30
       },
       {
         "hour": 19,
-        "autos": 558,
-        "motos": 448,
-        "buses": 64,
-        "camiones": 10,
-        "bicicletas": 7,
-        "total": 1086,
-        "avgSpeed": 25
+        "autos": 542,
+        "motos": 341,
+        "buses": 66,
+        "camiones": 8,
+        "bicicletas": 71,
+        "total": 1028,
+        "avgSpeed": 30
       },
       {
         "hour": 20,
@@ -3542,7 +462,7 @@
         "camiones": 8,
         "bicicletas": 14,
         "total": 840,
-        "avgSpeed": 25
+        "avgSpeed": 30
       },
       {
         "hour": 21,
@@ -3552,7 +472,7 @@
         "camiones": 7,
         "bicicletas": 5,
         "total": 680,
-        "avgSpeed": 25
+        "avgSpeed": 30
       },
       {
         "hour": 22,
@@ -3562,7 +482,7 @@
         "camiones": 0,
         "bicicletas": 0,
         "total": 0,
-        "avgSpeed": 25
+        "avgSpeed": 30
       },
       {
         "hour": 23,
@@ -3572,23 +492,17 @@
         "camiones": 0,
         "bicicletas": 0,
         "total": 0,
-        "avgSpeed": 25
+        "avgSpeed": 30
       }
     ],
-    "tpd": 18220,
-    "hmd_hora": 6,
-    "hmd_total": 1419,
-    "pct_autos": 48,
-    "pct_motos": 43,
-    "n_records": 434,
-    "source": "SIMM_oficial_aforos_2018_2019"
+    "source": "SIMM_MEData_oficial",
+    "via_principal": "Carrera 65",
+    "via_secundaria": "Calle 50"
   },
   {
-    "intersection": "(6.25950, -75.58003)",
-    "lat": 6.2595,
-    "lng": -75.58003,
-    "via_principal": "",
-    "via_secundaria": "",
+    "intersection": "Carrera 65 - Calle 51",
+    "lat": 6.2566,
+    "lng": -75.5808,
     "hourly": [
       {
         "hour": 0,
@@ -3598,7 +512,7 @@
         "camiones": 0,
         "bicicletas": 0,
         "total": 0,
-        "avgSpeed": 25
+        "avgSpeed": 30
       },
       {
         "hour": 1,
@@ -3608,7 +522,7 @@
         "camiones": 0,
         "bicicletas": 0,
         "total": 0,
-        "avgSpeed": 25
+        "avgSpeed": 30
       },
       {
         "hour": 2,
@@ -3618,7 +532,7 @@
         "camiones": 0,
         "bicicletas": 0,
         "total": 0,
-        "avgSpeed": 25
+        "avgSpeed": 30
       },
       {
         "hour": 3,
@@ -3628,7 +542,7 @@
         "camiones": 0,
         "bicicletas": 0,
         "total": 0,
-        "avgSpeed": 25
+        "avgSpeed": 30
       },
       {
         "hour": 4,
@@ -3638,7 +552,7 @@
         "camiones": 0,
         "bicicletas": 0,
         "total": 0,
-        "avgSpeed": 25
+        "avgSpeed": 30
       },
       {
         "hour": 5,
@@ -3648,147 +562,147 @@
         "camiones": 0,
         "bicicletas": 0,
         "total": 0,
-        "avgSpeed": 25
+        "avgSpeed": 30
       },
       {
         "hour": 6,
-        "autos": 6,
-        "motos": 58,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 9,
-        "total": 74,
-        "avgSpeed": 25
+        "autos": 278,
+        "motos": 200,
+        "buses": 8,
+        "camiones": 10,
+        "bicicletas": 3,
+        "total": 499,
+        "avgSpeed": 30
       },
       {
         "hour": 7,
-        "autos": 4,
-        "motos": 62,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 9,
-        "total": 76,
-        "avgSpeed": 25
+        "autos": 315,
+        "motos": 313,
+        "buses": 12,
+        "camiones": 11,
+        "bicicletas": 5,
+        "total": 656,
+        "avgSpeed": 30
       },
       {
         "hour": 8,
-        "autos": 12,
-        "motos": 57,
-        "buses": 0,
-        "camiones": 1,
-        "bicicletas": 8,
-        "total": 79,
-        "avgSpeed": 25
+        "autos": 332,
+        "motos": 196,
+        "buses": 13,
+        "camiones": 13,
+        "bicicletas": 4,
+        "total": 559,
+        "avgSpeed": 30
       },
       {
         "hour": 9,
-        "autos": 14,
-        "motos": 45,
-        "buses": 0,
-        "camiones": 2,
-        "bicicletas": 10,
-        "total": 70,
-        "avgSpeed": 25
+        "autos": 258,
+        "motos": 150,
+        "buses": 13,
+        "camiones": 9,
+        "bicicletas": 3,
+        "total": 433,
+        "avgSpeed": 30
       },
       {
         "hour": 10,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
+        "autos": 232,
+        "motos": 139,
+        "buses": 9,
+        "camiones": 13,
+        "bicicletas": 2,
+        "total": 396,
+        "avgSpeed": 30
       },
       {
         "hour": 11,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
+        "autos": 233,
+        "motos": 154,
+        "buses": 7,
+        "camiones": 8,
+        "bicicletas": 5,
+        "total": 406,
+        "avgSpeed": 30
       },
       {
         "hour": 12,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
+        "autos": 265,
+        "motos": 164,
+        "buses": 8,
+        "camiones": 10,
+        "bicicletas": 6,
+        "total": 454,
+        "avgSpeed": 30
       },
       {
         "hour": 13,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
+        "autos": 245,
+        "motos": 159,
+        "buses": 7,
+        "camiones": 6,
+        "bicicletas": 3,
+        "total": 420,
+        "avgSpeed": 30
       },
       {
         "hour": 14,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
+        "autos": 265,
+        "motos": 180,
+        "buses": 9,
+        "camiones": 11,
+        "bicicletas": 6,
+        "total": 471,
+        "avgSpeed": 30
       },
       {
         "hour": 15,
-        "autos": 0,
-        "motos": 0,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 0,
-        "total": 0,
-        "avgSpeed": 25
+        "autos": 275,
+        "motos": 174,
+        "buses": 9,
+        "camiones": 10,
+        "bicicletas": 3,
+        "total": 470,
+        "avgSpeed": 30
       },
       {
         "hour": 16,
-        "autos": 7,
-        "motos": 36,
-        "buses": 0,
-        "camiones": 2,
-        "bicicletas": 12,
-        "total": 57,
-        "avgSpeed": 25
+        "autos": 317,
+        "motos": 229,
+        "buses": 8,
+        "camiones": 8,
+        "bicicletas": 5,
+        "total": 568,
+        "avgSpeed": 30
       },
       {
         "hour": 17,
-        "autos": 8,
-        "motos": 52,
-        "buses": 1,
-        "camiones": 1,
-        "bicicletas": 22,
-        "total": 85,
-        "avgSpeed": 25
+        "autos": 333,
+        "motos": 377,
+        "buses": 10,
+        "camiones": 5,
+        "bicicletas": 7,
+        "total": 733,
+        "avgSpeed": 30
       },
       {
         "hour": 18,
-        "autos": 5,
-        "motos": 57,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 16,
-        "total": 79,
-        "avgSpeed": 25
+        "autos": 235,
+        "motos": 331,
+        "buses": 11,
+        "camiones": 6,
+        "bicicletas": 4,
+        "total": 587,
+        "avgSpeed": 30
       },
       {
         "hour": 19,
-        "autos": 8,
-        "motos": 35,
-        "buses": 0,
-        "camiones": 0,
-        "bicicletas": 17,
-        "total": 60,
-        "avgSpeed": 25
+        "autos": 239,
+        "motos": 169,
+        "buses": 8,
+        "camiones": 3,
+        "bicicletas": 4,
+        "total": 423,
+        "avgSpeed": 30
       },
       {
         "hour": 20,
@@ -3798,7 +712,7 @@
         "camiones": 0,
         "bicicletas": 0,
         "total": 0,
-        "avgSpeed": 25
+        "avgSpeed": 30
       },
       {
         "hour": 21,
@@ -3808,7 +722,7 @@
         "camiones": 0,
         "bicicletas": 0,
         "total": 0,
-        "avgSpeed": 25
+        "avgSpeed": 30
       },
       {
         "hour": 22,
@@ -3818,7 +732,7 @@
         "camiones": 0,
         "bicicletas": 0,
         "total": 0,
-        "avgSpeed": 25
+        "avgSpeed": 30
       },
       {
         "hour": 23,
@@ -3828,15 +742,2761 @@
         "camiones": 0,
         "bicicletas": 0,
         "total": 0,
-        "avgSpeed": 25
+        "avgSpeed": 30
       }
     ],
-    "tpd": 580,
-    "hmd_hora": 17,
-    "hmd_total": 85,
-    "pct_autos": 11,
-    "pct_motos": 69,
-    "n_records": 64,
-    "source": "SIMM_oficial_aforos_2018_2019"
+    "source": "SIMM_MEData_oficial",
+    "via_principal": "Carrera 65",
+    "via_secundaria": "Calle 51"
+  },
+  {
+    "intersection": "Calle 49B - Carrera 74",
+    "lat": 6.25995,
+    "lng": -75.5904,
+    "hourly": [
+      {
+        "hour": 0,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 1,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 2,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 3,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 4,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 5,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 6,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 7,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 8,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 9,
+        "autos": 141,
+        "motos": 48,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 189,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 10,
+        "autos": 166,
+        "motos": 68,
+        "buses": 0,
+        "camiones": 2,
+        "bicicletas": 0,
+        "total": 236,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 11,
+        "autos": 177,
+        "motos": 92,
+        "buses": 0,
+        "camiones": 4,
+        "bicicletas": 0,
+        "total": 272,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 12,
+        "autos": 180,
+        "motos": 90,
+        "buses": 1,
+        "camiones": 2,
+        "bicicletas": 0,
+        "total": 274,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 13,
+        "autos": 165,
+        "motos": 76,
+        "buses": 0,
+        "camiones": 4,
+        "bicicletas": 0,
+        "total": 246,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 14,
+        "autos": 134,
+        "motos": 71,
+        "buses": 0,
+        "camiones": 2,
+        "bicicletas": 0,
+        "total": 207,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 15,
+        "autos": 122,
+        "motos": 62,
+        "buses": 0,
+        "camiones": 1,
+        "bicicletas": 0,
+        "total": 185,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 16,
+        "autos": 142,
+        "motos": 56,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 198,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 17,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 18,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 19,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 20,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 21,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 22,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 23,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      }
+    ],
+    "source": "SIMM_MEData_oficial",
+    "via_principal": "Calle 49B",
+    "via_secundaria": "Carrera 74"
+  },
+  {
+    "intersection": "Calle 49B - Carrera 75",
+    "lat": 6.26017,
+    "lng": -75.59095,
+    "hourly": [
+      {
+        "hour": 0,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 1,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 2,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 3,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 4,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 5,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 6,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 7,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 8,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 9,
+        "autos": 17,
+        "motos": 15,
+        "buses": 0,
+        "camiones": 1,
+        "bicicletas": 0,
+        "total": 33,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 10,
+        "autos": 19,
+        "motos": 8,
+        "buses": 0,
+        "camiones": 1,
+        "bicicletas": 0,
+        "total": 28,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 11,
+        "autos": 21,
+        "motos": 14,
+        "buses": 0,
+        "camiones": 2,
+        "bicicletas": 0,
+        "total": 38,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 12,
+        "autos": 25,
+        "motos": 16,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 42,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 13,
+        "autos": 28,
+        "motos": 12,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 40,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 14,
+        "autos": 24,
+        "motos": 14,
+        "buses": 0,
+        "camiones": 1,
+        "bicicletas": 0,
+        "total": 38,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 15,
+        "autos": 16,
+        "motos": 12,
+        "buses": 0,
+        "camiones": 1,
+        "bicicletas": 0,
+        "total": 30,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 16,
+        "autos": 11,
+        "motos": 9,
+        "buses": 0,
+        "camiones": 1,
+        "bicicletas": 0,
+        "total": 21,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 17,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 18,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 19,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 20,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 21,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 22,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 23,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      }
+    ],
+    "source": "SIMM_MEData_oficial",
+    "via_principal": "Calle 49B",
+    "via_secundaria": "Carrera 75"
+  },
+  {
+    "intersection": "Calle 49B - Carrera 76",
+    "lat": 6.26044,
+    "lng": -75.59152,
+    "hourly": [
+      {
+        "hour": 0,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 1,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 2,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 3,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 4,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 5,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 6,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 7,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 8,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 9,
+        "autos": 57,
+        "motos": 19,
+        "buses": 0,
+        "camiones": 1,
+        "bicicletas": 0,
+        "total": 77,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 10,
+        "autos": 88,
+        "motos": 33,
+        "buses": 0,
+        "camiones": 1,
+        "bicicletas": 0,
+        "total": 122,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 11,
+        "autos": 89,
+        "motos": 38,
+        "buses": 0,
+        "camiones": 3,
+        "bicicletas": 0,
+        "total": 130,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 12,
+        "autos": 79,
+        "motos": 38,
+        "buses": 0,
+        "camiones": 1,
+        "bicicletas": 0,
+        "total": 118,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 13,
+        "autos": 78,
+        "motos": 35,
+        "buses": 0,
+        "camiones": 2,
+        "bicicletas": 0,
+        "total": 115,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 14,
+        "autos": 76,
+        "motos": 38,
+        "buses": 0,
+        "camiones": 2,
+        "bicicletas": 0,
+        "total": 116,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 15,
+        "autos": 69,
+        "motos": 29,
+        "buses": 0,
+        "camiones": 1,
+        "bicicletas": 0,
+        "total": 99,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 16,
+        "autos": 73,
+        "motos": 25,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 98,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 17,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 18,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 19,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 20,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 21,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 22,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 23,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      }
+    ],
+    "source": "SIMM_MEData_oficial",
+    "via_principal": "Calle 49B",
+    "via_secundaria": "Carrera 76"
+  },
+  {
+    "intersection": "Calle 49B - Carrera 77A",
+    "lat": 6.26118,
+    "lng": -75.59306,
+    "hourly": [
+      {
+        "hour": 0,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 1,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 2,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 3,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 4,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 5,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 6,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 7,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 8,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 9,
+        "autos": 43,
+        "motos": 15,
+        "buses": 0,
+        "camiones": 2,
+        "bicicletas": 0,
+        "total": 60,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 10,
+        "autos": 51,
+        "motos": 25,
+        "buses": 0,
+        "camiones": 2,
+        "bicicletas": 0,
+        "total": 79,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 11,
+        "autos": 41,
+        "motos": 12,
+        "buses": 0,
+        "camiones": 2,
+        "bicicletas": 0,
+        "total": 55,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 12,
+        "autos": 44,
+        "motos": 15,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 60,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 13,
+        "autos": 40,
+        "motos": 17,
+        "buses": 0,
+        "camiones": 1,
+        "bicicletas": 0,
+        "total": 58,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 14,
+        "autos": 60,
+        "motos": 25,
+        "buses": 0,
+        "camiones": 1,
+        "bicicletas": 0,
+        "total": 86,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 15,
+        "autos": 47,
+        "motos": 15,
+        "buses": 0,
+        "camiones": 1,
+        "bicicletas": 0,
+        "total": 63,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 16,
+        "autos": 48,
+        "motos": 15,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 63,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 17,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 18,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 19,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 20,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 21,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 22,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 23,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      }
+    ],
+    "source": "SIMM_MEData_oficial",
+    "via_principal": "Calle 49B",
+    "via_secundaria": "Carrera 77A"
+  },
+  {
+    "intersection": "Calle 49B - Carrera 77B",
+    "lat": 6.26141,
+    "lng": -75.59353,
+    "hourly": [
+      {
+        "hour": 0,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 1,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 2,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 3,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 4,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 5,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 6,
+        "autos": 19,
+        "motos": 8,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 28,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 7,
+        "autos": 39,
+        "motos": 25,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 65,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 8,
+        "autos": 44,
+        "motos": 20,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 64,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 9,
+        "autos": 35,
+        "motos": 14,
+        "buses": 0,
+        "camiones": 1,
+        "bicicletas": 0,
+        "total": 51,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 10,
+        "autos": 38,
+        "motos": 17,
+        "buses": 0,
+        "camiones": 1,
+        "bicicletas": 0,
+        "total": 56,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 11,
+        "autos": 31,
+        "motos": 10,
+        "buses": 0,
+        "camiones": 1,
+        "bicicletas": 0,
+        "total": 42,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 12,
+        "autos": 37,
+        "motos": 14,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 52,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 13,
+        "autos": 30,
+        "motos": 14,
+        "buses": 0,
+        "camiones": 1,
+        "bicicletas": 0,
+        "total": 45,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 14,
+        "autos": 40,
+        "motos": 17,
+        "buses": 0,
+        "camiones": 1,
+        "bicicletas": 0,
+        "total": 58,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 15,
+        "autos": 37,
+        "motos": 12,
+        "buses": 0,
+        "camiones": 1,
+        "bicicletas": 0,
+        "total": 49,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 16,
+        "autos": 35,
+        "motos": 19,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 54,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 17,
+        "autos": 45,
+        "motos": 31,
+        "buses": 0,
+        "camiones": 1,
+        "bicicletas": 0,
+        "total": 78,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 18,
+        "autos": 33,
+        "motos": 23,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 56,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 19,
+        "autos": 31,
+        "motos": 14,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 45,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 20,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 21,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 22,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 23,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      }
+    ],
+    "source": "SIMM_MEData_oficial",
+    "via_principal": "Calle 49B",
+    "via_secundaria": "Carrera 77B"
+  },
+  {
+    "intersection": "Calle 48 - Carrera 77B",
+    "lat": 6.25824,
+    "lng": -75.5951,
+    "hourly": [
+      {
+        "hour": 0,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 1,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 2,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 3,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 4,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 5,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 6,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 7,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 8,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 9,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 10,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 11,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 12,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 13,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 14,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 15,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 16,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 17,
+        "autos": 620,
+        "motos": 503,
+        "buses": 11,
+        "camiones": 8,
+        "bicicletas": 0,
+        "total": 1141,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 18,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 19,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 20,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 21,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 22,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 23,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      }
+    ],
+    "source": "SIMM_MEData_oficial",
+    "via_principal": "Calle 48",
+    "via_secundaria": "Carrera 77B"
+  },
+  {
+    "intersection": "Calle 48B - Carrera 77B",
+    "lat": 6.2594,
+    "lng": -75.59456,
+    "hourly": [
+      {
+        "hour": 0,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 1,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 2,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 3,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 4,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 5,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 6,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 7,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 8,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 9,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 10,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 11,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 12,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 13,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 14,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 15,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 16,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 17,
+        "autos": 53,
+        "motos": 28,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 81,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 18,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 19,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 20,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 21,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 22,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 23,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      }
+    ],
+    "source": "SIMM_MEData_oficial",
+    "via_principal": "Calle 48B",
+    "via_secundaria": "Carrera 77B"
+  },
+  {
+    "intersection": "Calle 48C - Carrera 77B",
+    "lat": 6.25991,
+    "lng": -75.5943,
+    "hourly": [
+      {
+        "hour": 0,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 1,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 2,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 3,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 4,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 5,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 6,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 7,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 8,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 9,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 10,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 11,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 12,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 13,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 14,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 15,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 16,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 17,
+        "autos": 57,
+        "motos": 28,
+        "buses": 0,
+        "camiones": 1,
+        "bicicletas": 0,
+        "total": 86,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 18,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 19,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 20,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 21,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 22,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 23,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      }
+    ],
+    "source": "SIMM_MEData_oficial",
+    "via_principal": "Calle 48C",
+    "via_secundaria": "Carrera 77B"
+  },
+  {
+    "intersection": "Carrera 70 - Calle 53",
+    "lat": 6.2605,
+    "lng": -75.58509,
+    "hourly": [
+      {
+        "hour": 0,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 1,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 2,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 3,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 4,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 5,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 6,
+        "autos": 299,
+        "motos": 245,
+        "buses": 40,
+        "camiones": 13,
+        "bicicletas": 15,
+        "total": 612,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 7,
+        "autos": 284,
+        "motos": 239,
+        "buses": 49,
+        "camiones": 15,
+        "bicicletas": 15,
+        "total": 603,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 8,
+        "autos": 273,
+        "motos": 176,
+        "buses": 46,
+        "camiones": 19,
+        "bicicletas": 8,
+        "total": 522,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 9,
+        "autos": 268,
+        "motos": 158,
+        "buses": 38,
+        "camiones": 20,
+        "bicicletas": 9,
+        "total": 493,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 10,
+        "autos": 236,
+        "motos": 153,
+        "buses": 39,
+        "camiones": 20,
+        "bicicletas": 8,
+        "total": 456,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 11,
+        "autos": 231,
+        "motos": 142,
+        "buses": 36,
+        "camiones": 19,
+        "bicicletas": 6,
+        "total": 435,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 12,
+        "autos": 247,
+        "motos": 167,
+        "buses": 36,
+        "camiones": 21,
+        "bicicletas": 8,
+        "total": 479,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 13,
+        "autos": 252,
+        "motos": 158,
+        "buses": 34,
+        "camiones": 18,
+        "bicicletas": 9,
+        "total": 471,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 14,
+        "autos": 270,
+        "motos": 181,
+        "buses": 36,
+        "camiones": 19,
+        "bicicletas": 8,
+        "total": 515,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 15,
+        "autos": 265,
+        "motos": 173,
+        "buses": 37,
+        "camiones": 17,
+        "bicicletas": 9,
+        "total": 501,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 16,
+        "autos": 295,
+        "motos": 249,
+        "buses": 35,
+        "camiones": 16,
+        "bicicletas": 12,
+        "total": 607,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 17,
+        "autos": 271,
+        "motos": 386,
+        "buses": 36,
+        "camiones": 13,
+        "bicicletas": 22,
+        "total": 727,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 18,
+        "autos": 257,
+        "motos": 345,
+        "buses": 40,
+        "camiones": 11,
+        "bicicletas": 18,
+        "total": 670,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 19,
+        "autos": 277,
+        "motos": 292,
+        "buses": 34,
+        "camiones": 7,
+        "bicicletas": 14,
+        "total": 624,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 20,
+        "autos": 233,
+        "motos": 214,
+        "buses": 22,
+        "camiones": 4,
+        "bicicletas": 14,
+        "total": 487,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 21,
+        "autos": 190,
+        "motos": 155,
+        "buses": 15,
+        "camiones": 3,
+        "bicicletas": 7,
+        "total": 369,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 22,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 23,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      }
+    ],
+    "source": "SIMM_MEData_oficial",
+    "via_principal": "Carrera 70",
+    "via_secundaria": "Calle 53"
+  },
+  {
+    "intersection": "Carrera 70 - Calle 51",
+    "lat": 6.25901,
+    "lng": -75.58587,
+    "hourly": [
+      {
+        "hour": 0,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 1,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 2,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 3,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 4,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 5,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 6,
+        "autos": 216,
+        "motos": 221,
+        "buses": 18,
+        "camiones": 4,
+        "bicicletas": 23,
+        "total": 483,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 7,
+        "autos": 177,
+        "motos": 219,
+        "buses": 20,
+        "camiones": 5,
+        "bicicletas": 24,
+        "total": 445,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 8,
+        "autos": 180,
+        "motos": 121,
+        "buses": 19,
+        "camiones": 9,
+        "bicicletas": 15,
+        "total": 344,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 9,
+        "autos": 180,
+        "motos": 109,
+        "buses": 17,
+        "camiones": 10,
+        "bicicletas": 13,
+        "total": 329,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 10,
+        "autos": 164,
+        "motos": 88,
+        "buses": 15,
+        "camiones": 5,
+        "bicicletas": 11,
+        "total": 283,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 11,
+        "autos": 152,
+        "motos": 90,
+        "buses": 15,
+        "camiones": 6,
+        "bicicletas": 12,
+        "total": 274,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 12,
+        "autos": 156,
+        "motos": 87,
+        "buses": 14,
+        "camiones": 5,
+        "bicicletas": 12,
+        "total": 275,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 13,
+        "autos": 158,
+        "motos": 107,
+        "buses": 14,
+        "camiones": 7,
+        "bicicletas": 13,
+        "total": 299,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 14,
+        "autos": 168,
+        "motos": 100,
+        "buses": 15,
+        "camiones": 5,
+        "bicicletas": 12,
+        "total": 300,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 15,
+        "autos": 174,
+        "motos": 92,
+        "buses": 16,
+        "camiones": 6,
+        "bicicletas": 10,
+        "total": 298,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 16,
+        "autos": 175,
+        "motos": 101,
+        "buses": 16,
+        "camiones": 6,
+        "bicicletas": 12,
+        "total": 309,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 17,
+        "autos": 163,
+        "motos": 148,
+        "buses": 17,
+        "camiones": 4,
+        "bicicletas": 20,
+        "total": 352,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 18,
+        "autos": 132,
+        "motos": 127,
+        "buses": 17,
+        "camiones": 2,
+        "bicicletas": 20,
+        "total": 298,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 19,
+        "autos": 156,
+        "motos": 101,
+        "buses": 15,
+        "camiones": 2,
+        "bicicletas": 16,
+        "total": 290,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 20,
+        "autos": 119,
+        "motos": 85,
+        "buses": 9,
+        "camiones": 1,
+        "bicicletas": 14,
+        "total": 229,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 21,
+        "autos": 98,
+        "motos": 74,
+        "buses": 6,
+        "camiones": 1,
+        "bicicletas": 11,
+        "total": 190,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 22,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 23,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      }
+    ],
+    "source": "SIMM_MEData_oficial",
+    "via_principal": "Carrera 70",
+    "via_secundaria": "Calle 51"
+  },
+  {
+    "intersection": "Carrera 65 - Calle 59",
+    "lat": 6.2595,
+    "lng": -75.58003,
+    "hourly": [
+      {
+        "hour": 0,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 1,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 2,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 3,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 4,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 5,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 6,
+        "autos": 6,
+        "motos": 58,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 9,
+        "total": 74,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 7,
+        "autos": 4,
+        "motos": 62,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 9,
+        "total": 76,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 8,
+        "autos": 12,
+        "motos": 57,
+        "buses": 0,
+        "camiones": 1,
+        "bicicletas": 8,
+        "total": 79,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 9,
+        "autos": 14,
+        "motos": 45,
+        "buses": 0,
+        "camiones": 2,
+        "bicicletas": 10,
+        "total": 70,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 10,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 11,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 12,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 13,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 14,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 15,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 16,
+        "autos": 7,
+        "motos": 36,
+        "buses": 0,
+        "camiones": 2,
+        "bicicletas": 12,
+        "total": 57,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 17,
+        "autos": 8,
+        "motos": 52,
+        "buses": 1,
+        "camiones": 1,
+        "bicicletas": 22,
+        "total": 85,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 18,
+        "autos": 5,
+        "motos": 57,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 16,
+        "total": 79,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 19,
+        "autos": 8,
+        "motos": 35,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 17,
+        "total": 60,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 20,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 21,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 22,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      },
+      {
+        "hour": 23,
+        "autos": 0,
+        "motos": 0,
+        "buses": 0,
+        "camiones": 0,
+        "bicicletas": 0,
+        "total": 0,
+        "avgSpeed": 30
+      }
+    ],
+    "source": "SIMM_MEData_oficial",
+    "via_principal": "Carrera 65",
+    "via_secundaria": "Calle 59"
   }
 ]

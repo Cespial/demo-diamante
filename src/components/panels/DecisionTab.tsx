@@ -40,10 +40,11 @@ export function DecisionTab({ scenario, hour }: DecisionTabProps) {
   const { data: occupancy } = useData<HotelOccupancy[]>("/data/hotel-occupancy-events.json");
 
   const financials = calculateFinancials();
-  const parkingInfo = getParkingDemand(scenario, hour, 1100);
 
   // Compute key metrics
   const competitorSpaces = parking?.reduce((s, p) => s + p.capacity, 0) ?? 0;
+  const totalSupply = competitorSpaces + DEFAULT_FINANCIAL_PARAMS.parkingSpaces;
+  const parkingInfo = getParkingDemand(scenario, hour, totalSupply);
   const competitorCount = parking?.length ?? 0;
   const totalEvents = events?.length ?? 0;
   const totalAttendance = events?.reduce((s, e) => s + e.attendance, 0) ?? 0;

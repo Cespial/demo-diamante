@@ -35,23 +35,47 @@ export function applyScenarioToTraffic(
 }
 
 /**
- * Get parking demand for a scenario at a given hour.
+ * Get parking demand derived from real traffic in the study polygon.
+ *
+ * demanda = tráfico_polígono × factor_atracción (día normal)
+ *         + diferencial_evento × factor_atracción  (día evento)
+ *
+ * Supply (totalSupply) is independent — it's the sum of competitor
+ * spaces + Diamante spaces.
  */
 export function getParkingDemand(
   scenario: Scenario,
   hour: number,
-  totalSpaces: number
+  totalSupply: number,
+  baseTrafficHour: number = 0,
+  attractionFactor: number = 0.02
 ): { demand: number; occupancy: number; overflow: boolean } {
-  const baseDemand = totalSpaces * 0.45; // 45% base occupancy
-  const eventDemand =
-    scenario.id === "normal"
-      ? 0
-      : scenario.parkingDemand *
-        gaussian(hour, scenario.peakHour, scenario.peakSpread);
+  // If no traffic data provided, fall back to a conservative polygon
+  // estimate of ~12,000 veh/hr peak, gaussian-distributed across the day.
+  const estimatedTraffic =
+    baseTrafficHour > 0
+      ? baseTrafficHour
+      : Math.round(
+          2000 +
+            10000 *
+              (0.3 * gaussian(hour, 8, 2) +
+                0.5 * gaussian(hour, 12, 2.5) +
+                0.7 * gaussian(hour, 17, 2.5))
+        );
 
-  const demand = Math.round(baseDemand + eventDemand);
-  const occupancy = clamp(demand / totalSpaces, 0, 1.5);
-  const overflow = demand > totalSpaces;
+  // Apply scenario multiplier to the traffic estimate
+  const eventFactor =
+    scenario.id === "normal"
+      ? 1
+      : 1 +
+        (scenario.vehicleMultiplier - 1) *
+          gaussian(hour, scenario.peakHour, scenario.peakSpread);
+  const adjustedTraffic = Math.round(estimatedTraffic * clamp(eventFactor, 1, scenario.vehicleMultiplier));
+
+  // Demand = adjusted traffic × attraction factor
+  const demand = Math.round(adjustedTraffic * attractionFactor);
+  const occupancy = totalSupply > 0 ? clamp(demand / totalSupply, 0, 2.0) : 0;
+  const overflow = demand > totalSupply;
 
   return { demand, occupancy, overflow };
 }

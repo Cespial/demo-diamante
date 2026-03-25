@@ -43,6 +43,18 @@ export const DIAMANTE_POLYGON: [number, number][] = [
 
 export const DIAMANTE_HEIGHT = 25; // meters (2 underground + ground level)
 
+// ── Study polygon (agreed with partner): Cra 68–77C × Cll 45–53A ──
+export const STUDY_POLYGON: [number, number][] = [
+  [-75.5785, 6.2505], // SE — Cra 68 × Cll 45
+  [-75.5990, 6.2505], // SW — Cra 77C × Cll 45
+  [-75.5990, 6.2615], // NW — Cra 77C × Cll 53A
+  [-75.5785, 6.2615], // NE — Cra 68 × Cll 53A
+  [-75.5785, 6.2505], // close ring
+];
+
+// Default attraction factor: % of traffic in polygon seeking parking
+export const ATTRACTION_FACTOR_DEFAULT = 0.02; // 2%
+
 // Impact radii (meters)
 export const IMPACT_RADII = [500, 1000, 1500];
 

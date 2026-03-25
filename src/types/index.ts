@@ -35,6 +35,9 @@ export interface TrafficAforo {
   lat: number;
   lng: number;
   hourly: HourlyVolume[];
+  source?: "SIMM_oficial" | "estimado";
+  via_principal?: string;
+  via_secundaria?: string;
 }
 
 // ── Parking ──
