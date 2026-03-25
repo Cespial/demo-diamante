@@ -24,7 +24,9 @@
     "phone": null,
     "website": null,
     "walkingTimeSeconds": 324,
-    "walkingDistanceMeters": 387
+    "walkingDistanceMeters": 387,
+    "carSpaces": 29,
+    "motoSpaces": 12
   },
   {
     "id": "ChIJkXuD0Q0pRI4RMgbl5pFYg6U",
@@ -51,7 +53,9 @@
     "phone": null,
     "website": null,
     "walkingTimeSeconds": 433,
-    "walkingDistanceMeters": 507
+    "walkingDistanceMeters": 507,
+    "carSpaces": 56,
+    "motoSpaces": 24
   },
   {
     "id": "ChIJI3Y5LBMpRI4RuH7THXjKxHg",
@@ -78,7 +82,9 @@
     "phone": "312 7659413",
     "website": null,
     "walkingTimeSeconds": 486,
-    "walkingDistanceMeters": 580
+    "walkingDistanceMeters": 580,
+    "carSpaces": 18,
+    "motoSpaces": 7
   },
   {
     "id": "ChIJByP6hhUpRI4RQdhmIT-lT0Q",
@@ -105,7 +111,9 @@
     "phone": "312 7659413",
     "website": null,
     "walkingTimeSeconds": 800,
-    "walkingDistanceMeters": 972
+    "walkingDistanceMeters": 972,
+    "carSpaces": 18,
+    "motoSpaces": 7
   },
   {
     "id": "ChIJ5XI2KxApRI4RkWMSfEhed38",
@@ -132,7 +140,9 @@
     "phone": null,
     "website": null,
     "walkingTimeSeconds": 788,
-    "walkingDistanceMeters": 956
+    "walkingDistanceMeters": 956,
+    "carSpaces": 31,
+    "motoSpaces": 14
   },
   {
     "id": "ChIJuZWinD8pRI4RiTiGjWWzq1k",
@@ -151,7 +161,9 @@
     "phone": null,
     "website": null,
     "walkingTimeSeconds": 385,
-    "walkingDistanceMeters": 471
+    "walkingDistanceMeters": 471,
+    "carSpaces": 18,
+    "motoSpaces": 7
   },
   {
     "id": "ChIJ9ZNU51gpRI4RMVse42AbK90",
@@ -170,7 +182,9 @@
     "phone": null,
     "website": null,
     "walkingTimeSeconds": 622,
-    "walkingDistanceMeters": 724
+    "walkingDistanceMeters": 724,
+    "carSpaces": 18,
+    "motoSpaces": 7
   },
   {
     "id": "ChIJG5sk3AgpRI4RaRBLdsXUhJw",
@@ -197,7 +211,9 @@
     "phone": "44480327",
     "website": null,
     "walkingTimeSeconds": 568,
-    "walkingDistanceMeters": 705
+    "walkingDistanceMeters": 705,
+    "carSpaces": 18,
+    "motoSpaces": 7
   },
   {
     "id": "ChIJq3WmSBcpRI4Rs-zp6f6NocQ",
@@ -224,7 +240,9 @@
     "phone": null,
     "website": null,
     "walkingTimeSeconds": 854,
-    "walkingDistanceMeters": 1016
+    "walkingDistanceMeters": 1016,
+    "carSpaces": 18,
+    "motoSpaces": 7
   },
   {
     "id": "ChIJ0aEKyxEpRI4Rb6sF8jNJF14",
@@ -243,7 +261,9 @@
     "phone": null,
     "website": null,
     "walkingTimeSeconds": 833,
-    "walkingDistanceMeters": 990
+    "walkingDistanceMeters": 990,
+    "carSpaces": 18,
+    "motoSpaces": 7
   },
   {
     "id": "ChIJYXovR8gpRI4RQMIo7NGo_ls",
@@ -270,7 +290,9 @@
     "phone": "313 6661772",
     "website": null,
     "walkingTimeSeconds": 949,
-    "walkingDistanceMeters": 1131
+    "walkingDistanceMeters": 1131,
+    "carSpaces": 18,
+    "motoSpaces": 7
   },
   {
     "id": "ChIJeYVhVwgpRI4RikVJREgJFaE",
@@ -289,7 +311,9 @@
     "phone": null,
     "website": null,
     "walkingTimeSeconds": 614,
-    "walkingDistanceMeters": 749
+    "walkingDistanceMeters": 749,
+    "carSpaces": 18,
+    "motoSpaces": 7
   },
   {
     "id": "ChIJzdMlQhApRI4RUC57i3rvodU",
@@ -308,7 +332,9 @@
     "phone": null,
     "website": null,
     "walkingTimeSeconds": 1017,
-    "walkingDistanceMeters": 1218
+    "walkingDistanceMeters": 1218,
+    "carSpaces": 18,
+    "motoSpaces": 7
   },
   {
     "id": "ChIJp85FqhEpRI4RQxdUX14uEaY",
@@ -327,7 +353,9 @@
     "phone": null,
     "website": null,
     "walkingTimeSeconds": 1008,
-    "walkingDistanceMeters": 1204
+    "walkingDistanceMeters": 1204,
+    "carSpaces": 56,
+    "motoSpaces": 24
   },
   {
     "id": "ChIJWVWkLgopRI4R3a3cmMQKVDE",
@@ -346,7 +374,9 @@
     "phone": null,
     "website": null,
     "walkingTimeSeconds": 765,
-    "walkingDistanceMeters": 893
+    "walkingDistanceMeters": 893,
+    "carSpaces": 18,
+    "motoSpaces": 7
   },
   {
     "id": "ChIJxZg1qxopRI4RM0VAKxdGaao",
@@ -373,7 +403,9 @@
     "phone": "313 6839653",
     "website": "https://www.instagram.com/parqueaderoylavaderoavcolombia/profilecard/?igsh=MXUwMTlvM2Q5M2pzOA==",
     "walkingTimeSeconds": 968,
-    "walkingDistanceMeters": 1147
+    "walkingDistanceMeters": 1147,
+    "carSpaces": 18,
+    "motoSpaces": 7
   },
   {
     "id": "ChIJv5DyuREpRI4RJT7ZGZD2jME",
@@ -392,7 +424,9 @@
     "phone": null,
     "website": null,
     "walkingTimeSeconds": 1013,
-    "walkingDistanceMeters": 1210
+    "walkingDistanceMeters": 1210,
+    "carSpaces": 18,
+    "motoSpaces": 7
   },
   {
     "id": "ChIJmad4qhEpRI4RnES9T_kjMS4",
@@ -411,7 +445,9 @@
     "phone": null,
     "website": null,
     "walkingTimeSeconds": 999,
-    "walkingDistanceMeters": 1192
+    "walkingDistanceMeters": 1192,
+    "carSpaces": 56,
+    "motoSpaces": 24
   },
   {
     "id": "ChIJtauRhQgpRI4R8_HS_ywxW9w",
@@ -430,7 +466,9 @@
     "phone": "45811268",
     "website": null,
     "walkingTimeSeconds": 734,
-    "walkingDistanceMeters": 917
+    "walkingDistanceMeters": 917,
+    "carSpaces": 18,
+    "motoSpaces": 7
   },
   {
     "id": "ChIJ32uKIQopRI4R2FJMr2yI4wg",
@@ -457,7 +495,9 @@
     "phone": "45800184",
     "website": null,
     "walkingTimeSeconds": 846,
-    "walkingDistanceMeters": 986
+    "walkingDistanceMeters": 986,
+    "carSpaces": 18,
+    "motoSpaces": 7
   },
   {
     "id": "manual_obelisco",
@@ -476,7 +516,9 @@
     "tarifaMax": 9000,
     "type": "garage",
     "walkingDistanceMeters": 200,
-    "source": "cali_mayor"
+    "source": "cali_mayor",
+    "carSpaces": 36,
+    "motoSpaces": 16
   },
   {
     "id": "manual_acuatico",
@@ -495,6 +537,8 @@
     "tarifaMax": 7000,
     "type": "surface",
     "walkingDistanceMeters": 150,
-    "source": "cali_mayor"
+    "source": "cali_mayor",
+    "carSpaces": 48,
+    "motoSpaces": 21
   }
 ]

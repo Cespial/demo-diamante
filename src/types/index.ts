@@ -47,6 +47,8 @@ export interface ParkingPOI {
   lat: number;
   lng: number;
   capacity: number;
+  carSpaces?: number;
+  motoSpaces?: number;
   tarifaMin: number;
   tarifaMax: number;
   type: string;

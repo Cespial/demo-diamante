@@ -59,6 +59,7 @@ export function DiamanteMap({ scenario, hour, layerVisibility, onToggleLayer }: 
   const { data: studyRoads } = useData<GeoJSON.FeatureCollection>("/data/study-road-network.geojson");
   const { data: parkingPolygons } = useData<GeoJSON.FeatureCollection>("/data/parking-polygons.geojson");
   const { data: manzanas } = useData<GeoJSON.FeatureCollection>("/data/manzanas-grid.geojson");
+  const { data: speedProfiles } = useData<{ corredor: string; sentido: string; hora: number; velocidad_promedio_kmh: number; intensidad_promedio: number }[]>("/data/traffic-speeds-official.json");
 
   const vis = useCallback((id: string) => layerVisibility[id] ?? false, [layerVisibility]);
   const trafficLayerRef = useRef<google.maps.TrafficLayer | null>(null);
@@ -144,7 +145,8 @@ export function DiamanteMap({ scenario, hour, layerVisibility, onToggleLayer }: 
       });
     }
 
-    // ── Study polygon (Cra 68–77C × Cll 45–53A) ──
+    // ── Study polygon (Cra 68–77C × Cll 45–53A) — toggleable ──
+    if (vis("urban-study-polygon")) {
     const studyPoly = new google.maps.Polygon({
       paths: STUDY_POLYGON.map(([lng, lat]) => ({ lat, lng })),
       fillColor: "#f59e0b",
@@ -169,6 +171,7 @@ export function DiamanteMap({ scenario, hour, layerVisibility, onToggleLayer }: 
     });
     add(studyPoly);
     add(studyOutline);
+    } // end urban-study-polygon
 
     // ── Diamante project marker ──
     const diamanteMarker = new google.maps.Marker({
@@ -323,21 +326,62 @@ export function DiamanteMap({ scenario, hour, layerVisibility, onToggleLayer }: 
       });
     }
 
-    // ── Traffic corridors ──
+    // ── Traffic corridors (with SIMM real speed data when available) ──
     if (vis("traffic-corridors") && corridors) {
+      // Build a lookup map from speedProfiles: "corredor" → hour → avg speed
+      const simmSpeeds: Record<string, Record<number, { vel: number; int: number }>> = {};
+      if (speedProfiles) {
+        for (const sp of speedProfiles) {
+          const key = sp.corredor.toLowerCase();
+          if (!simmSpeeds[key]) simmSpeeds[key] = {};
+          // Average across sentidos for this corredor+hour
+          if (!simmSpeeds[key][sp.hora]) {
+            simmSpeeds[key][sp.hora] = { vel: sp.velocidad_promedio_kmh, int: sp.intensidad_promedio };
+          } else {
+            const existing = simmSpeeds[key][sp.hora];
+            existing.vel = (existing.vel + sp.velocidad_promedio_kmh) / 2;
+            existing.int = (existing.int + sp.intensidad_promedio) / 2;
+          }
+        }
+      }
+
       corridors.forEach((c) => {
         const hv = c.hourly.find((h) => h.hour === hour) ?? c.hourly[0];
         if (!hv) return;
         const adj = applyScenarioToTraffic(hv, scenario, hour);
+
+        // Try to find SIMM real speed for this corridor and hour
+        const corridorKey = c.name.toLowerCase()
+          .replace("avenida ", "").replace("av. ", "").replace("carrera ", "cra ").replace("calle ", "cll ");
+        let simmSpeed: number | null = null;
+        let simmSource = false;
+        for (const [simmKey, hours] of Object.entries(simmSpeeds)) {
+          // Fuzzy match: check if corridor name contains SIMM corredor or vice versa
+          const simmLower = simmKey.toLowerCase();
+          if (corridorKey.includes(simmLower) || simmLower.includes(corridorKey) ||
+              c.name.toLowerCase().includes(simmLower) || simmLower.includes(c.name.toLowerCase())) {
+            if (hours[hour]) {
+              simmSpeed = hours[hour].vel;
+              simmSource = true;
+              break;
+            }
+          }
+        }
+
+        const displaySpeed = simmSpeed ?? adj.avgSpeed;
         const line = new google.maps.Polyline({
           path: c.coordinates.map(([lng, lat]) => ({ lat, lng })),
-          strokeColor: speedToColor(adj.avgSpeed),
+          strokeColor: speedToColor(displaySpeed),
           strokeWeight: 3 + (adj.total / 2000) * 5,
           strokeOpacity: 0.85,
           map,
         });
         line.addListener("click", () => {
-          iw.setContent(`<b>${c.name}</b><br>${adj.total} veh/hr · ${adj.avgSpeed} km/h`);
+          iw.setContent(
+            `<b>${c.name}</b><br>` +
+            `${adj.total} veh/hr · ${displaySpeed.toFixed(1)} km/h` +
+            (simmSource ? `<br><span style="color:#22c55e;font-size:10px">✓ Velocidad SIMM oficial</span>` : `<br><span style="color:#f59e0b;font-size:10px">~ Velocidad estimada</span>`)
+          );
           iw.setPosition(line.getPath().getAt(Math.floor(line.getPath().getLength() / 2)));
           iw.open(map);
         });
@@ -424,7 +468,7 @@ export function DiamanteMap({ scenario, hour, layerVisibility, onToggleLayer }: 
         marker.addListener("click", () => {
           iw.setContent(
             `<div style="max-width:220px"><b>${p.name}</b><br>` +
-            `Capacidad: ~${p.capacity} celdas<br>` +
+            `Capacidad: ~${p.capacity} celdas (${(p as any).carSpaces ?? '?'} carros, ${(p as any).motoSpaces ?? '?'} motos)<br>` +
             `Tarifa: $${(p.tarifaMin ?? 0).toLocaleString()}-$${(p.tarifaMax ?? 0).toLocaleString()}/hr` +
             (p.rating ? `<br>Rating: ${p.rating} (${p.reviewCount} reviews)` : "") +
             (p.walkingTimeSeconds ? `<br>Caminata: ${Math.round(p.walkingTimeSeconds / 60)} min` : "") +
@@ -595,7 +639,7 @@ export function DiamanteMap({ scenario, hour, layerVisibility, onToggleLayer }: 
         add(marker);
       });
     }
-  }, [googleLoaded, scenario, hour, corridors, parking, commerce, hotels, sports, incidents, odRoutes, isochrones, comuna11, stadium, closureRoutes, attractions, studyRoads, parkingPolygons, manzanas, vis]);
+  }, [googleLoaded, scenario, hour, corridors, parking, commerce, hotels, sports, incidents, odRoutes, isochrones, comuna11, stadium, closureRoutes, attractions, studyRoads, parkingPolygons, manzanas, speedProfiles, vis]);
 
   return (
     <div className="relative h-full w-full">

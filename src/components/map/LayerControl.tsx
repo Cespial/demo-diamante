@@ -14,8 +14,8 @@ const LAYER_GROUPS: LayerGroup[] = [
     name: "Tráfico",
     layers: [
       { id: "traffic-live", label: "Tráfico en vivo (Google)" },
-      { id: "traffic-corridors", label: "Corredores vehiculares" },
-      { id: "traffic-od", label: "Rutas origen-destino" },
+      { id: "traffic-corridors", label: "Corredores (vel. SIMM)" },
+      { id: "traffic-od", label: "Orígenes → Diamante" },
       { id: "traffic-closures", label: "Simulación cierres viales" },
       { id: "traffic-incidents", label: "Incidentes viales (6,384)" },
       { id: "isochrone-driving", label: "Isócrona vehículo" },
@@ -25,7 +25,7 @@ const LAYER_GROUPS: LayerGroup[] = [
   {
     name: "Parqueaderos",
     layers: [
-      { id: "parking-existing", label: "Parqueaderos existentes" },
+      { id: "parking-existing", label: "Parqueaderos (822 celdas)" },
     ],
   },
   {
@@ -48,10 +48,11 @@ const LAYER_GROUPS: LayerGroup[] = [
     name: "Urbanismo",
     layers: [
       { id: "urban-diamante", label: "Predio Diamante" },
-      { id: "urban-stadium", label: "Complejo Deportivo (3D)" },
+      { id: "urban-stadium", label: "Complejo Deportivo" },
       { id: "urban-comuna", label: "Límite Comuna 11" },
-      { id: "urban-barrios", label: "Barrios" },
-      { id: "urban-roads", label: "Red vial" },
+      { id: "urban-barrios", label: "Manzanas (oferta/demanda)" },
+      { id: "urban-roads", label: "Malla vial POT (703 seg.)" },
+      { id: "urban-study-polygon", label: "Polígono de estudio" },
       { id: "urban-licenses", label: "Licencias" },
     ],
   },
