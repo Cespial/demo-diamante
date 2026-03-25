@@ -9,7 +9,10 @@ import { useData } from "@/lib/hooks";
 import { LayerControl } from "./LayerControl";
 import { MapLegend } from "./MapLegend";
 
-const GOOGLE_API_KEY = "AIzaSyAo-W5e-Lt67nfgnMvUfbu2NJpIBVr7OE4";
+// API key loaded from environment variable NEXT_PUBLIC_GOOGLE_MAPS_API_KEY
+// Configure in Vercel Dashboard → Settings → Environment Variables
+// Or in .env.local for local development
+const GOOGLE_API_KEY = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY ?? "";
 
 interface DiamanteMapProps {
   scenario: Scenario;
