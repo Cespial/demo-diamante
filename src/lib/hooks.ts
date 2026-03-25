@@ -34,6 +34,7 @@ export function useAppState() {
       "urban-study-polygon": true,
       "urban-licenses": false,
     },
+    selectedRoadIds: [],
   });
 
   const setScenario = useCallback((id: ScenarioId) => {
@@ -58,6 +59,20 @@ export function useAppState() {
     }));
   }, []);
 
+  const toggleRoad = useCallback((roadId: string) => {
+    setState((s) => {
+      const ids = s.selectedRoadIds;
+      const next = ids.includes(roadId)
+        ? ids.filter((id) => id !== roadId)
+        : [...ids, roadId];
+      return { ...s, selectedRoadIds: next };
+    });
+  }, []);
+
+  const clearSelectedRoads = useCallback(() => {
+    setState((s) => ({ ...s, selectedRoadIds: [] }));
+  }, []);
+
   const scenario = useMemo(
     () => getScenario(state.activeScenario),
     [state.activeScenario]
@@ -70,6 +85,8 @@ export function useAppState() {
     setTab,
     setHour,
     toggleLayer,
+    toggleRoad,
+    clearSelectedRoads,
   };
 }
 

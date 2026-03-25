@@ -8,7 +8,7 @@ import { DiamanteMap } from "@/components/map/DiamanteMap";
 import Image from "next/image";
 
 export default function Home() {
-  const { state, scenario, setScenario, setTab, setHour, toggleLayer } =
+  const { state, scenario, setScenario, setTab, setHour, toggleLayer, toggleRoad, clearSelectedRoads } =
     useAppState();
 
   return (
@@ -73,6 +73,9 @@ export default function Home() {
             hour={state.hour}
             layerVisibility={state.layerVisibility}
             onToggleLayer={toggleLayer}
+            selectedRoadIds={state.selectedRoadIds}
+            onToggleRoad={toggleRoad}
+            onClearSelection={clearSelectedRoads}
           />
         </main>
       </div>

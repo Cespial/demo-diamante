@@ -9,16 +9,19 @@ import { useData } from "@/lib/hooks";
 import { LayerControl } from "./LayerControl";
 import { MapLegend } from "./MapLegend";
 
-const GOOGLE_API_KEY = "AIzaSyCDtpnJoftns_RXlJhDkLrLwOmdDPoQy10";
+const GOOGLE_API_KEY = "AIzaSyAo-W5e-Lt67nfgnMvUfbu2NJpIBVr7OE4";
 
 interface DiamanteMapProps {
   scenario: Scenario;
   hour: number;
   layerVisibility: Record<string, boolean>;
   onToggleLayer: (id: string) => void;
+  selectedRoadIds?: string[];
+  onToggleRoad?: (roadId: string) => void;
+  onClearSelection?: () => void;
 }
 
-// Load Google Maps script once
+// Load Google Maps script with Drawing + Geometry libraries
 function useGoogleMaps() {
   const [loaded, setLoaded] = useState(false);
   useEffect(() => {
@@ -27,7 +30,7 @@ function useGoogleMaps() {
     const existing = document.querySelector('script[src*="maps.googleapis.com"]');
     if (existing) { existing.addEventListener("load", () => setLoaded(true)); return; }
     const script = document.createElement("script");
-    script.src = `https://maps.googleapis.com/maps/api/js?key=${GOOGLE_API_KEY}&v=weekly`;
+    script.src = `https://maps.googleapis.com/maps/api/js?key=${GOOGLE_API_KEY}&v=weekly&libraries=drawing,geometry`;
     script.async = true;
     script.defer = true;
     script.onload = () => setLoaded(true);
@@ -36,7 +39,7 @@ function useGoogleMaps() {
   return loaded;
 }
 
-export function DiamanteMap({ scenario, hour, layerVisibility, onToggleLayer }: DiamanteMapProps) {
+export function DiamanteMap({ scenario, hour, layerVisibility, onToggleLayer, selectedRoadIds = [], onToggleRoad, onClearSelection }: DiamanteMapProps) {
   const mapContainerRef = useRef<HTMLDivElement>(null);
   const mapRef = useRef<google.maps.Map | null>(null);
   const overlaysRef = useRef<(google.maps.Polyline | google.maps.Polygon | google.maps.Circle | google.maps.Marker | google.maps.InfoWindow)[]>([]);
@@ -250,7 +253,7 @@ export function DiamanteMap({ scenario, hour, layerVisibility, onToggleLayer }: 
       });
     }
 
-    // ── Study area full road network (703 segments, POT hierarchy) ──
+    // ── Study area full road network (703 segments, POT hierarchy) — SELECTABLE ──
     if (vis("urban-roads") && studyRoads) {
       const POT_COLORS: Record<string, string> = {
         "Arteria Principal": "#ef4444",
@@ -268,23 +271,38 @@ export function DiamanteMap({ scenario, hour, layerVisibility, onToggleLayer }: 
         "Servicio": 0.8,
         "Peatonal": 1,
       };
+      const SELECTED_COLOR = "#00ff88";
+      const SELECTED_WEIGHT_BOOST = 2;
+
       studyRoads.features.forEach((f: any) => {
         const coords = f.geometry?.coordinates;
         if (!coords || coords.length < 2) return;
         const viaPot = f.properties?.via_pot || "Local";
+        const roadId = String(f.properties?.id || f.properties?.name || `road_${Math.random()}`);
+        const isSelected = selectedRoadIds.includes(roadId);
+
         const line = new google.maps.Polyline({
           path: coords.map(([lng, lat]: number[]) => ({ lat, lng })),
-          strokeColor: POT_COLORS[viaPot] || "#ffffff20",
-          strokeWeight: POT_WEIGHTS[viaPot] || 1,
-          strokeOpacity: 0.7,
+          strokeColor: isSelected ? SELECTED_COLOR : (POT_COLORS[viaPot] || "#ffffff20"),
+          strokeWeight: (POT_WEIGHTS[viaPot] || 1) + (isSelected ? SELECTED_WEIGHT_BOOST : 0),
+          strokeOpacity: isSelected ? 1.0 : 0.7,
           map,
+          zIndex: isSelected ? 50 : 1,
         });
         line.addListener("click", () => {
+          // Toggle road selection
+          if (onToggleRoad) {
+            onToggleRoad(roadId);
+          }
+          // Also show info
           iw.setContent(
+            `<div style="max-width:220px">` +
             `<b>${f.properties?.name || "Sin nombre"}</b><br>` +
             `Clasificación: ${viaPot}` +
             (f.properties?.lanes ? ` · ${f.properties.lanes} carriles` : "") +
-            (f.properties?.oneway === "yes" ? " · Un sentido" : "")
+            (f.properties?.oneway === "yes" ? " · Un sentido" : "") +
+            `<br><span style="color:${isSelected ? '#ef4444' : '#00ff88'};font-size:11px;cursor:pointer">${isSelected ? '✕ Deseleccionar' : '✓ Click para seleccionar'}</span>` +
+            `</div>`
           );
           iw.setPosition(line.getPath().getAt(Math.floor(line.getPath().getLength() / 2)));
           iw.open(map);
@@ -639,7 +657,7 @@ export function DiamanteMap({ scenario, hour, layerVisibility, onToggleLayer }: 
         add(marker);
       });
     }
-  }, [googleLoaded, scenario, hour, corridors, parking, commerce, hotels, sports, incidents, odRoutes, isochrones, comuna11, stadium, closureRoutes, attractions, studyRoads, parkingPolygons, manzanas, speedProfiles, vis]);
+  }, [googleLoaded, scenario, hour, corridors, parking, commerce, hotels, sports, incidents, odRoutes, isochrones, comuna11, stadium, closureRoutes, attractions, studyRoads, parkingPolygons, manzanas, speedProfiles, selectedRoadIds, vis]);
 
   return (
     <div className="relative h-full w-full">
@@ -657,6 +675,22 @@ export function DiamanteMap({ scenario, hour, layerVisibility, onToggleLayer }: 
       <div className="absolute top-3 left-3 z-10">
         <LayerControl visibility={layerVisibility} onToggle={onToggleLayer} />
       </div>
+
+      {/* Road Selection Badge */}
+      {selectedRoadIds.length > 0 && (
+        <div className="absolute top-3 left-1/2 -translate-x-1/2 z-10 flex items-center gap-2 rounded-full bg-emerald-600/90 backdrop-blur-sm px-4 py-1.5 shadow-lg border border-emerald-400/30">
+          <div className="h-2 w-2 rounded-full bg-emerald-300 animate-pulse" />
+          <span className="text-sm font-medium text-white">
+            {selectedRoadIds.length} calle{selectedRoadIds.length !== 1 ? "s" : ""} seleccionada{selectedRoadIds.length !== 1 ? "s" : ""}
+          </span>
+          <button
+            onClick={onClearSelection}
+            className="ml-1 text-xs text-emerald-200 hover:text-white transition-colors underline"
+          >
+            Limpiar
+          </button>
+        </div>
+      )}
 
       {/* Legend */}
       <div className="absolute bottom-6 right-3 z-10">

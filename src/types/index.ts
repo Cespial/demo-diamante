@@ -295,4 +295,5 @@ export interface AppState {
   activeTab: TabId;
   hour: number;
   layerVisibility: Record<string, boolean>;
+  selectedRoadIds: string[];
 }
