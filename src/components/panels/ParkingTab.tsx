@@ -1,5 +1,6 @@
 "use client";
 
+import { useState } from "react";
 import type { Scenario, ParkingPOI } from "@/types";
 import { Card, CardHeader, CardContent } from "@/components/ui/Card";
 import { KPICard } from "@/components/ui/KPICard";
@@ -18,11 +19,12 @@ interface ParkingTabProps {
 
 export function ParkingTab({ scenario, hour }: ParkingTabProps) {
   const { data: parking, loading } = useData<ParkingPOI[]>("/data/parking-pois.json");
+  const [attractionPct, setAttractionPct] = useState(ATTRACTION_FACTOR_DEFAULT * 100);
 
   const diamanteSpaces = DEFAULT_FINANCIAL_PARAMS.parkingSpaces; // 1,100
   const competitorSpaces = parking?.reduce((s, p) => s + p.capacity, 0) ?? 0;
   const totalSupply = competitorSpaces + diamanteSpaces;
-  const attractionFactor = ATTRACTION_FACTOR_DEFAULT;
+  const attractionFactor = attractionPct / 100;
 
   const { demand, occupancy, overflow } = getParkingDemand(
     scenario, hour, totalSupply, 0, attractionFactor
@@ -69,6 +71,27 @@ export function ParkingTab({ scenario, hour }: ParkingTabProps) {
           color="#3b82f6"
         />
       </div>
+
+      <Card>
+        <CardHeader>Factor de Atracción</CardHeader>
+        <CardContent>
+          <div className="flex items-center gap-3">
+            <input
+              type="range"
+              min={1}
+              max={5}
+              step={0.5}
+              value={attractionPct}
+              onChange={(e) => setAttractionPct(parseFloat(e.target.value))}
+              className="flex-1 h-1.5 appearance-none rounded-full bg-white/10 accent-amber-500"
+            />
+            <span className="text-sm font-bold text-amber-400 w-10 text-right">{attractionPct}%</span>
+          </div>
+          <p className="text-[10px] text-white/30 mt-1">
+            % del tráfico del polígono ({formatNumber(68787)} veh/día) que busca estacionar
+          </p>
+        </CardContent>
+      </Card>
 
       <Card>
         <CardHeader>Demanda vs Oferta por Hora</CardHeader>

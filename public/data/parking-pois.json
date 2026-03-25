@@ -458,5 +458,43 @@
     "website": null,
     "walkingTimeSeconds": 846,
     "walkingDistanceMeters": 986
+  },
+  {
+    "id": "manual_obelisco",
+    "name": "Centro Comercial Obelisco (Parqueadero)",
+    "lat": 6.2555,
+    "lng": -75.587,
+    "category": "parking",
+    "subcategory": "garage",
+    "rating": 3.8,
+    "reviewCount": 120,
+    "priceLevel": null,
+    "address": "Cra 70 × Cll 48, Estadio, Medellín",
+    "openingHours": [],
+    "capacity": 52,
+    "tarifaMin": 4500,
+    "tarifaMax": 9000,
+    "type": "garage",
+    "walkingDistanceMeters": 200,
+    "source": "cali_mayor"
+  },
+  {
+    "id": "manual_acuatico",
+    "name": "Complejo Acuático (Parqueadero)",
+    "lat": 6.2572,
+    "lng": -75.589,
+    "category": "parking",
+    "subcategory": "surface",
+    "rating": 3.5,
+    "reviewCount": 30,
+    "priceLevel": null,
+    "address": "Complejo Deportivo Atanasio Girardot",
+    "openingHours": [],
+    "capacity": 69,
+    "tarifaMin": 4000,
+    "tarifaMax": 7000,
+    "type": "surface",
+    "walkingDistanceMeters": 150,
+    "source": "cali_mayor"
   }
 ]
