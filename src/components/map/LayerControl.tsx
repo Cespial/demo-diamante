@@ -26,6 +26,7 @@ const LAYER_GROUPS: LayerGroup[] = [
     name: "Parqueaderos",
     layers: [
       { id: "parking-existing", label: "Parqueaderos (822 celdas)" },
+      { id: "parking-spaces", label: "Celdas individuales (6,927)" },
     ],
   },
   {

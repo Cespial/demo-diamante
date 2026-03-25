@@ -31,6 +31,7 @@ export function useAppState() {
       "urban-comuna": true,
       "urban-barrios": false,
       "urban-roads": false,
+      "parking-spaces": false,
       "urban-study-polygon": true,
       "urban-licenses": false,
     },

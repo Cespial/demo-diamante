@@ -67,6 +67,12 @@ export function DiamanteMap({ scenario, hour, layerVisibility, onToggleLayer, se
   const { data: manzanas } = useData<GeoJSON.FeatureCollection>("/data/manzanas-grid.geojson");
   const { data: speedProfiles } = useData<{ corredor: string; sentido: string; hora: number; velocidad_promedio_kmh: number; intensidad_promedio: number }[]>("/data/traffic-speeds-official.json");
 
+  // Load parking spaces based on scenario
+  const spacesFile = scenario.id === "clasico" || scenario.id === "concierto"
+    ? "/data/parking-spaces-clasico.geojson"
+    : "/data/parking-spaces-normal.geojson";
+  const { data: parkingSpaces } = useData<GeoJSON.FeatureCollection>(spacesFile);
+
   const vis = useCallback((id: string) => layerVisibility[id] ?? false, [layerVisibility]);
   const trafficLayerRef = useRef<google.maps.TrafficLayer | null>(null);
 
@@ -413,6 +419,72 @@ export function DiamanteMap({ scenario, hour, layerVisibility, onToggleLayer, se
       });
     }
 
+    // ── Individual parking spaces (6,927 rectangles) ──
+    if (vis("parking-spaces") && parkingSpaces) {
+      parkingSpaces.features.forEach((f: any) => {
+        const p = f.properties;
+        const coords = f.geometry?.coordinates?.[0];
+        if (!coords || coords.length < 4) return;
+
+        let fillColor: string;
+        let fillOpacity: number;
+        let strokeColor: string;
+        let zIdx: number;
+
+        if (p.type === "diamante") {
+          // Diamante proposed spaces — emerald green, always "available"
+          fillColor = "#10b981";
+          fillOpacity = 0.7;
+          strokeColor = "#34d399";
+          zIdx = 60;
+        } else if (p.occupied) {
+          // Occupied — red
+          fillColor = "#ef4444";
+          fillOpacity = 0.65;
+          strokeColor = "#dc2626";
+          zIdx = 40;
+        } else {
+          // Available — green
+          fillColor = "#22c55e";
+          fillOpacity = 0.55;
+          strokeColor = "#16a34a";
+          zIdx = 40;
+        }
+
+        const poly = new google.maps.Polygon({
+          paths: coords.map(([lng, lat]: number[]) => ({ lat, lng })),
+          fillColor,
+          fillOpacity,
+          strokeColor,
+          strokeWeight: 0.5,
+          strokeOpacity: 0.8,
+          map,
+          zIndex: zIdx,
+        });
+
+        poly.addListener("click", () => {
+          const status = p.type === "diamante" ? "Propuesto" : (p.occupied ? "Ocupado" : "Disponible");
+          const statusColor = p.type === "diamante" ? "#10b981" : (p.occupied ? "#ef4444" : "#22c55e");
+          const icon = p.type === "diamante" ? "◆" : (p.occupied ? "🚗" : "✓");
+          iw.setContent(
+            `<div style="text-align:center;min-width:140px">` +
+            `<div style="font-size:20px">${icon}</div>` +
+            `<b style="color:${statusColor}">${status}</b><br>` +
+            `<span style="color:#666;font-size:11px">${p.type === "street" ? "Parqueo en vía" : (p.type === "diamante" ? "Diamante de Béisbol" : "Parqueadero formal")}</span><br>` +
+            (p.lot_name ? `<span style="font-size:10px;color:#999">${p.lot_name}</span><br>` : "") +
+            (p.road_name ? `<span style="font-size:10px;color:#999">${p.road_name}</span><br>` : "") +
+            `<span style="font-size:9px;color:#bbb">Celda: 2.50m × 5.50m</span>` +
+            `</div>`
+          );
+          const bounds = new google.maps.LatLngBounds();
+          coords.forEach(([lng, lat]: number[]) => bounds.extend({ lat, lng }));
+          iw.setPosition(bounds.getCenter());
+          iw.open(map);
+        });
+        add(poly);
+      });
+    }
+
     // ── Traffic corridors (with SIMM real speed data when available) ──
     if (vis("traffic-corridors") && corridors) {
       // Build a lookup map from speedProfiles: "corredor" → hour → avg speed
@@ -726,7 +798,7 @@ export function DiamanteMap({ scenario, hour, layerVisibility, onToggleLayer, se
         add(marker);
       });
     }
-  }, [googleLoaded, scenario, hour, corridors, parking, commerce, hotels, sports, incidents, odRoutes, isochrones, comuna11, stadium, closureRoutes, attractions, studyRoads, parkingPolygons, manzanas, speedProfiles, selectedRoadIds, vis]);
+  }, [googleLoaded, scenario, hour, corridors, parking, commerce, hotels, sports, incidents, odRoutes, isochrones, comuna11, stadium, closureRoutes, attractions, studyRoads, parkingPolygons, manzanas, speedProfiles, parkingSpaces, selectedRoadIds, vis]);
 
   return (
     <div className="relative h-full w-full">
@@ -764,9 +836,9 @@ export function DiamanteMap({ scenario, hour, layerVisibility, onToggleLayer, se
       {/* Floating KPI strip — bottom left */}
       <div className="absolute bottom-4 left-3 z-10 flex gap-1.5">
         <FloatingKPI label="TPD Polígono" value="68,787" unit="veh/día" color="#3b82f6" />
-        <FloatingKPI label="Oferta actual" value="822" unit="celdas" color="#f59e0b" />
-        <FloatingKPI label="Diamante" value="+1,100" unit="celdas" color="#10b981" />
-        <FloatingKPI label="Déficit evento" value="-578" unit="celdas" color="#ef4444" />
+        <FloatingKPI label="Celdas totales" value="6,927" unit="zona estudio" color="#f59e0b" />
+        <FloatingKPI label="Diamante" value="+1,100" unit="propuestas" color="#10b981" />
+        <FloatingKPI label="Vía pública" value="5,005" unit="informales" color="#ef4444" />
       </div>
 
       {/* Scenario indicator */}

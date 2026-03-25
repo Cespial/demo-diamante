@@ -19,6 +19,14 @@ export function MapLegend({ scenario, layerVisibility = {} }: MapLegendProps) {
         {/* Always visible */}
         <LegendItem color="#10b981" label="◆ Diamante (propuesta)" shape="circle" />
         <LegendItem color="#f59e0b" label="Polígono de estudio" shape="dashed" />
+        {vis("parking-spaces") && (
+          <>
+            <div className="text-[9px] text-white/30 uppercase mt-1">Celdas de parqueo</div>
+            <LegendItem color="#22c55e" label="Disponible" shape="square" />
+            <LegendItem color="#ef4444" label="Ocupado" shape="square" />
+            <LegendItem color="#10b981" label="Diamante (propuesto)" shape="square" />
+          </>
+        )}
 
         {/* Traffic */}
         <div className="border-t border-black/10 dark:border-white/10 my-1" />
