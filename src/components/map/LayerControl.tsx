@@ -41,7 +41,7 @@ const LAYER_GROUPS: LayerGroup[] = [
   {
     name: "Eventos",
     layers: [
-      { id: "events-radius", label: "Radios de impacto" },
+      { id: "events-radius", label: "Distancia caminando (3/5/8 min)" },
     ],
   },
   {

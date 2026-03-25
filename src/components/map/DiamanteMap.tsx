@@ -179,45 +179,111 @@ export function DiamanteMap({ scenario, hour, layerVisibility, onToggleLayer, se
     add(studyOutline);
     } // end urban-study-polygon
 
-    // ── Diamante project marker ──
+    // ── Diamante de Béisbol — PROYECTO (emerald green, pulsing) ──
+    // Animated pulse ring
+    const pulseCircle = new google.maps.Circle({
+      center: { lat: DIAMANTE_CENTER.lat, lng: DIAMANTE_CENTER.lng },
+      radius: 80,
+      fillColor: "#10b981",
+      fillOpacity: 0.08,
+      strokeColor: "#34d399",
+      strokeWeight: 1.5,
+      strokeOpacity: 0.4,
+      map,
+      zIndex: 90,
+    });
+    add(pulseCircle);
+
+    // Diamante polygon (footprint) — emerald green
+    const diamante = new google.maps.Polygon({
+      paths: DIAMANTE_POLYGON.map(([lng, lat]) => ({ lat, lng })),
+      fillColor: "#059669",
+      fillOpacity: 0.55,
+      strokeColor: "#34d399",
+      strokeWeight: 3,
+      map,
+      zIndex: 95,
+    });
+    diamante.addListener("click", () => {
+      iw.setContent(
+        `<div style="max-width:280px;font-family:system-ui">` +
+        `<div style="background:linear-gradient(135deg,#059669,#10b981);padding:10px 14px;border-radius:8px 8px 0 0;margin:-8px -12px 8px -12px">` +
+        `<b style="font-size:15px;color:#fff">◆ Diamante de Béisbol</b><br>` +
+        `<span style="color:#d1fae5;font-size:11px">Proyecto de estacionamiento subterráneo</span>` +
+        `</div>` +
+        `<table style="width:100%;font-size:11px;border-collapse:collapse">` +
+        `<tr><td style="color:#888;padding:3px 0">Celdas</td><td style="text-align:right;font-weight:600">1,100</td></tr>` +
+        `<tr><td style="color:#888;padding:3px 0">Niveles</td><td style="text-align:right">2 sótanos</td></tr>` +
+        `<tr><td style="color:#888;padding:3px 0">Comercio</td><td style="text-align:right">~2,000 m²</td></tr>` +
+        `<tr><td style="color:#888;padding:3px 0">CAPEX est.</td><td style="text-align:right">$98,175M COP</td></tr>` +
+        `<tr><td style="color:#888;padding:3px 0">Payback</td><td style="text-align:right">~9.6 años</td></tr>` +
+        `<tr style="border-top:1px solid #eee"><td style="color:#888;padding:5px 0 2px">Ubicación</td><td style="text-align:right;font-size:10px">Cra 70 × Cll 48</td></tr>` +
+        `</table>` +
+        `<div style="margin-top:6px;padding:4px 8px;background:#f0fdf4;border-radius:4px;font-size:10px;color:#065f46;text-align:center">` +
+        `APP Iniciativa Privada · Sin recursos públicos` +
+        `</div>` +
+        `</div>`
+      );
+      const bounds = new google.maps.LatLngBounds();
+      DIAMANTE_POLYGON.forEach(([lng, lat]) => bounds.extend({ lat, lng }));
+      iw.setPosition(bounds.getCenter());
+      iw.open(map);
+    });
+    add(diamante);
+
+    // Diamante label marker
     const diamanteMarker = new google.maps.Marker({
       position: { lat: DIAMANTE_CENTER.lat, lng: DIAMANTE_CENTER.lng },
       map,
-      title: "Diamante de Béisbol",
-      label: { text: "◆", color: "#fff", fontSize: "16px", fontWeight: "bold" },
+      title: "Diamante de Béisbol — 1,100 celdas",
+      label: { text: "◆", color: "#fff", fontSize: "18px", fontWeight: "bold" },
       icon: {
         path: google.maps.SymbolPath.CIRCLE,
-        scale: 18,
-        fillColor: "#d97706",
+        scale: 20,
+        fillColor: "#059669",
         fillOpacity: 0.95,
-        strokeColor: "#fbbf24",
+        strokeColor: "#34d399",
         strokeWeight: 3,
       },
       zIndex: 100,
     });
-    diamanteMarker.addListener("click", () => {
-      iw.setContent(
-        `<div style="max-width:240px">` +
-        `<b style="font-size:13px">◆ Diamante de Béisbol</b><br>` +
-        `<span style="color:#666">Propuesta: 1,100 celdas en 2 sótanos</span><br>` +
-        `<span style="color:#666">Comercio: ~2,000 m² a nivel</span><br>` +
-        `<span style="color:#999;font-size:11px">Cra 70 × Cll 48 — Laureles-Estadio</span>` +
-        `</div>`
-      );
-      iw.open(map, diamanteMarker);
-    });
+    diamanteMarker.addListener("click", () => diamante.getPath() && google.maps.event.trigger(diamante, "click"));
     add(diamanteMarker);
 
-    // ── Diamante polygon (footprint) ──
-    const diamante = new google.maps.Polygon({
-      paths: DIAMANTE_POLYGON.map(([lng, lat]) => ({ lat, lng })),
-      fillColor: "#d97706",
-      fillOpacity: 0.35,
-      strokeColor: "#fbbf24",
-      strokeWeight: 2.5,
-      map,
-    });
-    add(diamante);
+    // ── Walking distance rings from Diamante (3min, 5min, 8min) ──
+    if (vis("events-radius")) {
+      const WALK_RINGS = [
+        { meters: 240, label: "3 min", color: "#10b981" },
+        { meters: 400, label: "5 min", color: "#f59e0b" },
+        { meters: 640, label: "8 min", color: "#ef4444" },
+      ];
+      WALK_RINGS.forEach((ring) => {
+        const circle = new google.maps.Circle({
+          center: { lat: DIAMANTE_CENTER.lat, lng: DIAMANTE_CENTER.lng },
+          radius: ring.meters,
+          fillOpacity: 0,
+          strokeColor: ring.color,
+          strokeWeight: 1.5,
+          strokeOpacity: 0.5,
+          map,
+        });
+        // Label at top of circle
+        const labelLat = DIAMANTE_CENTER.lat + (ring.meters / 111320);
+        const labelMarker = new google.maps.Marker({
+          position: { lat: labelLat, lng: DIAMANTE_CENTER.lng },
+          map,
+          icon: { path: google.maps.SymbolPath.CIRCLE, scale: 0 },
+          label: {
+            text: `🚶 ${ring.label}`,
+            fontSize: "10px",
+            color: ring.color,
+            fontWeight: "bold",
+          },
+        });
+        add(circle);
+        add(labelMarker);
+      });
+    }
 
     // ── Comuna 11 boundary ──
     if (vis("urban-comuna") && comuna11) {
@@ -695,10 +761,43 @@ export function DiamanteMap({ scenario, hour, layerVisibility, onToggleLayer, se
         </div>
       )}
 
+      {/* Floating KPI strip — bottom left */}
+      <div className="absolute bottom-4 left-3 z-10 flex gap-1.5">
+        <FloatingKPI label="TPD Polígono" value="68,787" unit="veh/día" color="#3b82f6" />
+        <FloatingKPI label="Oferta actual" value="822" unit="celdas" color="#f59e0b" />
+        <FloatingKPI label="Diamante" value="+1,100" unit="celdas" color="#10b981" />
+        <FloatingKPI label="Déficit evento" value="-578" unit="celdas" color="#ef4444" />
+      </div>
+
+      {/* Scenario indicator */}
+      <div className="absolute top-14 right-3 z-10">
+        <div className="rounded-lg bg-gray-900/80 backdrop-blur-sm border border-white/10 px-3 py-2 shadow-lg">
+          <div className="flex items-center gap-2">
+            <div className="h-3 w-3 rounded-full" style={{ backgroundColor: scenario.color }} />
+            <div>
+              <div className="text-xs font-semibold text-white">{scenario.name}</div>
+              {scenario.attendance > 0 && (
+                <div className="text-[10px] text-white/40">{scenario.attendance.toLocaleString()} asistentes</div>
+              )}
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* Legend */}
-      <div className="absolute bottom-6 right-3 z-10">
+      <div className="absolute bottom-4 right-3 z-10">
         <MapLegend scenario={scenario} layerVisibility={layerVisibility} />
       </div>
+    </div>
+  );
+}
+
+function FloatingKPI({ label, value, unit, color }: { label: string; value: string; unit: string; color: string }) {
+  return (
+    <div className="rounded-lg bg-gray-900/85 backdrop-blur-sm border border-white/10 px-2.5 py-1.5 shadow-lg min-w-[80px]">
+      <div className="text-[9px] text-white/40 uppercase tracking-wider">{label}</div>
+      <div className="text-sm font-bold" style={{ color }}>{value}</div>
+      <div className="text-[9px] text-white/30">{unit}</div>
     </div>
   );
 }

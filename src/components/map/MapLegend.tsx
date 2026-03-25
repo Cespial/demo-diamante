@@ -17,7 +17,7 @@ export function MapLegend({ scenario, layerVisibility = {} }: MapLegendProps) {
       </div>
       <div className="space-y-1">
         {/* Always visible */}
-        <LegendItem color="#d97706" label="◆ Diamante (propuesta)" shape="circle" />
+        <LegendItem color="#10b981" label="◆ Diamante (propuesta)" shape="circle" />
         <LegendItem color="#f59e0b" label="Polígono de estudio" shape="dashed" />
 
         {/* Traffic */}
